@@ -1,7 +1,6 @@
-import { UseDisclosureReturn } from "@chakra-ui/hooks";
-import { Box } from "@chakra-ui/layout";
-import { useToken } from "@chakra-ui/system";
+import { UseDisclosureReturn, Box, Stack, useToken } from "@chakra-ui/react";
 import React from "react";
+import NavLink from "./navlink";
 
 const Navbar = ({ isOpen }: UseDisclosureReturn) => {
   const [bg] = useToken("colors", ["gray.700"]);
@@ -18,7 +17,13 @@ const Navbar = ({ isOpen }: UseDisclosureReturn) => {
       transitionDuration=".6s"
       overflowY="auto"
     >
-      Navbar
+      <Stack h="full" justify="center">
+        <NavLink href="/">Home</NavLink>
+        <NavLink href="/about">About</NavLink>
+        <NavLink href="/portfolio">Portfolio</NavLink>
+        <NavLink href="/blog">Blog</NavLink>
+        <NavLink href="/contact">Contact</NavLink>
+      </Stack>
     </Box>
   );
 };
