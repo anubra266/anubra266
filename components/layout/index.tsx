@@ -27,7 +27,9 @@ const Layout = ({ children, page }) => {
             <CopyRight />
           </Flex>
           <Box pos="relative" w="full">
-            <Box boxSize="full" pos="absolute">{children}</Box>
+            <Box boxSize="full" pos="absolute">
+              {children}
+            </Box>
             <Navbar {...navProps} />
             <Box pos="absolute" display={{ md: "none" }}>
               <NavButton {...navProps} />
@@ -38,5 +40,4 @@ const Layout = ({ children, page }) => {
     </>
   );
 };
-//url('../images/bg-over.png') repeat #2a2a2e
 export default Layout;

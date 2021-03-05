@@ -7,7 +7,7 @@ import { textStyles } from "./tlStyles/textStyles";
 
 const config: ThemeConfig = {
   useSystemColorMode: false,
-  initialColorMode: "light",
+  initialColorMode: "dark",
 };
 
 export const overrides: ThemeOverride = {

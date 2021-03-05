@@ -17,7 +17,7 @@ const Home: AppPage = () => {
         >
           {process.env.myName}
         </Text>
-        <Text fontSize={["xl","3xl"]}>
+        <Text fontSize={["xl", "3xl"]}>
           An open source enthusiast & Full Stack Developer
         </Text>
         <Stack justify="center" direction="row" spacing="5">
