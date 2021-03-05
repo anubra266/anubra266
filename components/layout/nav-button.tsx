@@ -17,11 +17,11 @@ const NavButton = ({ onToggle, isOpen }: UseDisclosureReturn) => {
       fontWeight="700"
       cursor="pointer"
       bg="blackAlpha.50"
-      shadow="base"
       _hover={{
         bg: "blackAlpha.200",
       }}
       onClick={onToggle}
+      zIndex="tooltip"
     >
       <Box
         {...barStyle}

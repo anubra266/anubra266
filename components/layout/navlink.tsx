@@ -6,7 +6,7 @@ type NavLink = { children: ReactChild; href: string };
 
 const NavLink = (props: NavLink) => {
   return (
-    <Flex w="auto" justify="center">
+    <Flex w="auto" justify={{ md: "center" }} px={5}>
       <NextLink href={props.href}>
         <Text
           color="transparent"

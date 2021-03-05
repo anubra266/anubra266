@@ -22,6 +22,9 @@ const Layout = ({ children }) => {
         </Flex>
         <Box pos="relative" w="full">
           <Navbar {...navProps} />
+          <Box pos="absolute" display={{ md: "none" }}>
+            <NavButton {...navProps} />
+          </Box>
           <Box w="full">{children}</Box>
         </Box>
       </Flex>
