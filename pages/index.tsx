@@ -1,15 +1,19 @@
-import { Box } from '@chakra-ui/layout'
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import { Box } from "@chakra-ui/layout";
+import Head from "next/head";
+import Layout from "~/components/layout";
+import { AppPage } from "~/types";
 
-export default function Home() {
+const Home: AppPage = () => {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Abraham Anuoluwapo</title>
         <link rel="icon" href="/logo.png" />
       </Head>
-      
-    </div>
-  )
-}
+      wow
+    </>
+  );
+};
+
+Home.layout = (page: any) => <Layout children={page} />;
+export default Home;
