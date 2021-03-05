@@ -5,6 +5,7 @@ module.exports = {
     twitterUrl: "https://twitter.com/anubra266",
     linkedinUrl: "https://linkedin.com/in/anubra266",
     emailAddress: "anubra266@gmail.com",
+    myName: "Abraham Anuoluwapo",
   },
   webpack: (config, options) => {
     const custom_alias = {

@@ -3,12 +3,11 @@ import React from "react";
 import NavLink from "./navlink";
 
 const Navbar = ({ isOpen }: UseDisclosureReturn) => {
-  const [bg] = useToken("colors", ["brand.900"]);
   return (
     <Box
       pos="absolute"
       boxSize="full"
-      background={`url('/images/bg-over.png') repeat ${bg}`}
+      layerStyle="net"
       visibility={isOpen ? "visible" : "hidden"}
       opacity={isOpen ? 1 : 0}
       transform={`scaleX(${isOpen ? 1 : 0})`}

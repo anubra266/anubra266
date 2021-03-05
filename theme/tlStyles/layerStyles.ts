@@ -1,8 +1,15 @@
+import { BoxProps } from "@chakra-ui/react";
 import { mode } from "./tl-mode";
 
-export const layerStyles = {
+type layerStyles = { [key: string]: BoxProps };
+export const layerStyles: layerStyles = {
   card: {
     ...mode("bg", "white", "gray.800"),
     shadow: "base",
+  },
+  net: {
+    backgroundImage: "url('/images/bg-over.png')",
+    backgroundRepeat: "repeat",
+    bgColor: "brand.900",
   },
 };

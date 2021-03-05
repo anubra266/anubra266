@@ -1,7 +1,7 @@
 import { chakra, Box, Stack, useMediaQuery } from "@chakra-ui/react";
 import React from "react";
 
-const Slant = () => {
+const CopyRight = () => {
   const [isTallEnough] = useMediaQuery("(min-height: 560px)");
   return (
     isTallEnough && (
@@ -15,12 +15,12 @@ const Slant = () => {
         lineHeight="80px"
       >
         <Box>
-          <chakra.span color="brand.300"> Abraham Anuoluwapo A.</chakra.span>{" "}
-          &copy; 2021
+          <chakra.span color="brand.300"> {process.env.myName}</chakra.span>{" "}
+          &copy; {new Date().getFullYear()}
         </Box>
       </Stack>
     )
   );
 };
 
-export default Slant;
+export default CopyRight;

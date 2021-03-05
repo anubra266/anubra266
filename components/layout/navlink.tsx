@@ -9,13 +9,9 @@ const NavLink = (props: NavLink) => {
     <Flex w="auto" justify={{ md: "center" }} px={5}>
       <NextLink href={props.href}>
         <Text
-          color="transparent"
+          textStyle="stroke"
           _hover={{
             color: "white",
-          }}
-          sx={{
-            WebkitTextStrokeColor: "white",
-            WebkitTextStrokeWidth: "1px",
           }}
           w="min-content"
           transition="color .2s ease-in-out"

@@ -3,32 +3,39 @@ import React from "react";
 import Initial from "./initial";
 import NavButton from "./nav-button";
 import Navbar from "./navbar";
-import Slant from "./slant";
+import Head from "next/head";
+import CopyRight from "./copyright";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, page }) => {
   const navProps = useDisclosure();
   return (
-    <Box h="100vh" p={7}>
-      <Flex layerStyle="card" h="full" pos="relative">
-        <Flex
-          w="20"
-          display={["none", null, "inherit"]}
-          direction="column"
-          shadow="lg"
-        >
-          <Initial />
-          <NavButton {...navProps} />
-          <Slant />
-        </Flex>
-        <Box pos="relative" w="full">
-          <Navbar {...navProps} />
-          <Box pos="absolute" display={{ md: "none" }}>
+    <>
+      <Head>
+        <title>{page} | Abraham Anuoluwapo</title>
+        <link rel="icon" href="/logo.png" />
+      </Head>
+      <Box h="100vh" p={7}>
+        <Flex layerStyle="card" h="full" pos="relative">
+          <Flex
+            w="20"
+            display={["none", null, "inherit"]}
+            direction="column"
+            shadow="lg"
+          >
+            <Initial />
             <NavButton {...navProps} />
+            <CopyRight />
+          </Flex>
+          <Box pos="relative" w="full">
+            <Box boxSize="full" pos="absolute">{children}</Box>
+            <Navbar {...navProps} />
+            <Box pos="absolute" display={{ md: "none" }}>
+              <NavButton {...navProps} />
+            </Box>
           </Box>
-          <Box w="full">{children}</Box>
-        </Box>
-      </Flex>
-    </Box>
+        </Flex>
+      </Box>
+    </>
   );
 };
 //url('../images/bg-over.png') repeat #2a2a2e

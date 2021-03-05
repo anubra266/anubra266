@@ -6,16 +6,12 @@ const Initial = () => {
     <Flex
       boxSize="20"
       bg="brand.300"
-      color="transparent"
       justify="center"
       alignItems="center"
       fontSize="6xl"
       fontWeight="700"
       cursor="pointer"
-      sx={{
-        WebkitTextStrokeColor: "white",
-        WebkitTextStrokeWidth: "1px",
-      }}
+      textStyle="stroke"
     >
       A
     </Flex>
