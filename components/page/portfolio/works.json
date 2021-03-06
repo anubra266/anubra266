@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Choc UI",
+    "image": "https://choc-ui.tech/thumbnails/landing.png",
+    "url": "https://choc-ui.tech",
+    "stacks": ["React Js", "Chakra UI"],
+    "sections": ["frontend"]
+  },
+  {
+    "name": "Arnuay",
+    "image": "https://arnuay.anubra.tech/img/dashboard.png",
+    "url": "https://arnuay.anubra.tech",
+    "stacks": ["React Js", "Chakra UI", "Laravel"],
+    "sections": ["frontend", "backend"]
+  }
+]

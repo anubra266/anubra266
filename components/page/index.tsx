@@ -24,10 +24,10 @@ export const PageHeader = (props: BoxProps) => {
     <Box pos="relative">
       <Text
         textAlign="center"
-        fontSize={["3xl", "6xl"]}
+        fontSize={["3xl", "5xl"]}
         fontWeight="800"
         textTransform="uppercase"
-        mt={[, , -4]}
+        mt={[, , -3]}
         _after={{
           content: "''",
           pos: "absolute",

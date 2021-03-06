@@ -19,7 +19,7 @@ import {
   IoLogoVue,
   IoLogoWordpress,
 } from "react-icons/io5";
-import { SiBootstrap, SiPhp, SiSvelte, SiTailwindcss } from "react-icons/si";
+import { SiBootstrap, SiNextDotJs, SiPhp, SiSvelte, SiTailwindcss } from "react-icons/si";
 
 const Skills = () => {
   return (
@@ -49,6 +49,8 @@ const Skills = () => {
         <Skill name="Chakra UI" level={87} icon={ChakraLogo} />
         <Skill name="Bootstrap" level={85} icon={SiBootstrap} />
         <Skill name="Tailwind" level={82} icon={SiTailwindcss} />
+
+        <Skill name="Next Js" level={80} icon={SiNextDotJs} />
       </SimpleGrid>
     </Box>
   );
@@ -62,7 +64,11 @@ const Skill = (props: { name: string; level: number; icon: IconType }) => {
       <Stack spacing={5}>
         <Flex>
           <Icon as={props.icon} fontSize="xl" mr={2} my="auto" />
-          <Text fontWeight="600" textTransform="uppercase">
+          <Text
+            fontWeight="500"
+            textTransform="uppercase"
+            letterSpacing="wider"
+          >
             {props.name}
           </Text>
           <Spacer />
