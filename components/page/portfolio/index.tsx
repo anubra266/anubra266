@@ -26,7 +26,7 @@ const Works = () => {
             <PTab>Back end</PTab>
           </TabList>
         </Tabs>
-        <SimpleGrid columns={[1, , 2, 3]} spacingX={3}>
+        <SimpleGrid columns={[1, , 2, 3]} spacingX={3} spacingY={6}>
           {works.map((work: WorkProps, i) => (
             <Collapse
               key={i}

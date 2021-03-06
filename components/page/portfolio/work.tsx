@@ -25,11 +25,13 @@ const Work = (props: WorkProps) => {
         opacity={0}
         transformOrigin="bottom"
         transform="scaleY(0)"
-        _groupHover={{
-          visibility: "visible",
-          opacity: 1,
-          transform: "scaleY(1)",
-        }}
+        _groupHover={
+          loaded && {
+            visibility: "visible",
+            opacity: 1,
+            transform: "scaleY(1)",
+          }
+        }
         transitionDuration=".6s"
         justify="center"
         align="center"
@@ -54,12 +56,13 @@ const Work = (props: WorkProps) => {
           </Button>
         </Stack>
       </Flex>
-      <Skeleton isLoaded={loaded}>
+      <Skeleton isLoaded={loaded} boxSize="full">
         <Image
           src={props.image}
           boxSize="full"
           onLoad={() => setLoaded(true)}
           rounded="md"
+          loading="lazy"
         />
       </Skeleton>
     </GridItem>
