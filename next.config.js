@@ -8,9 +8,12 @@ module.exports = {
     myName: "Abraham Anuoluwapo",
     devStartYear: 2015,
     dateOfBirth: 2001,
-    phoneNumber1: "+234 701 3650 207",
     presentAddress: "Lagos, Nigeria",
     freelanceStatus: "available",
+    phoneNumber1: "+234 701 3650 207",
+    phoneNumber2: "+234 805 7292 375",
+    email1: "anubra266@gmail.com",
+    email2: "anubra2662@gmail.com",
   },
   webpack: (config, options) => {
     const custom_alias = {
