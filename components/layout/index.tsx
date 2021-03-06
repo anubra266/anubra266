@@ -23,7 +23,7 @@ const Layout = ({ children, page }) => {
         <meta property="og:title" content="Abraham Anuoluwapo - Portfolio" />
         <meta
           property="og:image"
-          content="https://anubra266.tk/images/preview.png"
+          content="https://raw.githubusercontent.com/anubra266/anubra266/main/public/images/preview.png"
         />
 
         <meta
