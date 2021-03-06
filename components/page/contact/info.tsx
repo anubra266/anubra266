@@ -1,4 +1,5 @@
 import { Stack, Text } from "@chakra-ui/layout";
+import Link from "next/link";
 import React from "react";
 import { IoCallOutline, IoLocationOutline } from "react-icons/io5";
 import { RiMailSendLine } from "react-icons/ri";
@@ -12,8 +13,12 @@ const Info = () => {
       </InfoCard>
       <InfoCard active title="Email" icon={RiMailSendLine}>
         <Stack>
-          <Text>{process.env.email1}</Text>
-          <Text>{process.env.email2}</Text>
+          <Link href={`mailto:${process.env.email1}`}>
+            {process.env.email1}
+          </Link>
+          <Link href={`mailto:${process.env.email2}`}>
+            {process.env.email2}
+          </Link>
         </Stack>
       </InfoCard>
       <InfoCard title="Phone" icon={IoCallOutline}>
