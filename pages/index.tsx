@@ -16,7 +16,7 @@ import { Page } from "~/components/page";
 
 const Home: AppPage = () => {
   return (
-    <Page layerStyle="net" >
+    <Page layerStyle="net">
       <Stack h="full" justify="center" textAlign="center" spacing="7">
         <Text
           textStyle="stroke"
@@ -48,7 +48,11 @@ const Home: AppPage = () => {
             href={process.env.linkedinUrl}
           />
         </Stack>
-        <Stack direction="row" justify="center" spacing="6">
+        <Stack
+          direction={["column", "row"]}
+          justify="center"
+          spacing={["3", "6"]}
+        >
           <LinkBox>
             <Button
               textTransform="uppercase"
