@@ -1,8 +1,29 @@
-import { UseDisclosureReturn, Box, Stack, useToken } from "@chakra-ui/react";
-import React from "react";
+import {
+  UseDisclosureReturn,
+  Box,
+  Stack,
+  useEventListener,
+} from "@chakra-ui/react";
+import React, { useEffect } from "react";
 import NavLink from "./navlink";
+import { useRouter } from "next/router";
 
-const Navbar = ({ isOpen }: UseDisclosureReturn) => {
+const Navbar = ({ isOpen, onClose }: UseDisclosureReturn) => {
+  const router = useRouter();
+  useEffect(() => {
+    const closeNav = () => onClose();
+    router.events.on("routeChangeComplete", closeNav);
+    return () => {
+      router.events.off("routeChangeComplete", closeNav);
+    };
+  }, []);
+  
+  useEventListener("keydown", (event) => {
+    if (event.key.toLowerCase() === "escape" && isOpen) {
+      event.preventDefault();
+      onClose();
+    }
+  });
   return (
     <Box
       pos="absolute"

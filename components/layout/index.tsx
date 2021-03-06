@@ -26,8 +26,13 @@ const Layout = ({ children, page }) => {
             <NavButton {...navProps} />
             <CopyRight />
           </Flex>
-          <Box pos="relative" w="full">
-            <Box boxSize="full" pos="absolute">
+          <Box pos="relative" w="full" h="full">
+            <Box
+              w="full"
+              h="full"
+              pos="absolute"
+              overflow="auto"
+            >
               {children}
             </Box>
             <Navbar {...navProps} />

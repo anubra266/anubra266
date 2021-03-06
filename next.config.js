@@ -6,6 +6,11 @@ module.exports = {
     linkedinUrl: "https://linkedin.com/in/anubra266",
     emailAddress: "anubra266@gmail.com",
     myName: "Abraham Anuoluwapo",
+    devStartYear: 2015,
+    dateOfBirth: 2001,
+    phoneNumber1: "+234 701 3650 207",
+    presentAddress: "Lagos, Nigeria",
+    freelanceStatus: "available",
   },
   webpack: (config, options) => {
     const custom_alias = {
