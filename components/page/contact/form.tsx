@@ -31,41 +31,58 @@ const Form = () => {
       position: "top",
     });
   };
-  const { name, email, subject, message, reset } = useForm({
+  const { name, email, subject, message, reset, data } = useForm({
     name: "",
     email: "",
     subject: "",
     message: "",
   });
+  const validateData = () => {
+    let status = true;
+    Object.keys(data).every((key) => {
+      console.log("key :>> ", key);
+      const field = data[key];
+      if (!field || 0 === field.trim().length) {
+        status = false;
+        announce(`${key.toUpperCase()} is required`, "warning");
+        console.log("key :>> ", key, field);
+        return false;
+      }
+      return true;
+    });
+    return status;
+  };
   const [loading, setLoading] = useState(false);
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    setLoading(true);
-    let templateParams = {
-      from_name: name.value,
-      from_email: email.value,
-      to_name: process.env.myName,
-      subject: subject.value,
-      message: message.value,
-    };
-    emailjs
-      .send(
-        "service_lpbnls3",
-        "template_1qcfjt3",
-        templateParams,
-        "user_Q4UfbP80V0crFqe5nhEHd"
-      )
-      .then(
-        () => {
-          reset();
-          announce("Your message was sent successfully", "success");
-          setLoading(false);
-        },
-        (err) => {
-          console.log("err :>> ", err);
-          announce(`${err}. Please try again`, "error");
-        }
-      );
+    if (validateData()) {
+      // setLoading(true);
+      // let templateParams = {
+      //   from_name: name.value,
+      //   from_email: email.value,
+      //   to_name: process.env.myName,
+      //   subject: subject.value,
+      //   message: message.value,
+      // };
+      // emailjs
+      //   .send(
+      //     "service_lpbnls3",
+      //     "template_1qcfjt3",
+      //     templateParams,
+      //     "user_Q4UfbP80V0crFqe5nhEHd"
+      //   )
+      //   .then(
+      //     () => {
+      //       reset();
+      //       announce("Your message was sent successfully", "success");
+      //       setLoading(false);
+      //     },
+      //     (err) => {
+      //       console.log("err :>> ", err);
+      //       announce(`${err}. Please try again`, "error");
+      //     }
+      //   );
+    }
   };
 
   return (

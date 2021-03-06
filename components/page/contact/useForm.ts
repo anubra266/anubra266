@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const useForm = (initialValues: any): any => {
+export const useForm = (initialValues: { [key: string]: string }): any => {
   const [data, setData] = useState(initialValues);
   const reset = () => setData(initialValues);
   const fields = Object.keys(initialValues).reduce((acc, nxt) => {
@@ -17,5 +17,5 @@ export const useForm = (initialValues: any): any => {
     acc[nxt] = props;
     return acc;
   }, {});
-  return { ...fields, reset };
+  return { ...fields, reset, data };
 };
