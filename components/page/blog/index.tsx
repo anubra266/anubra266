@@ -1,7 +1,9 @@
 import { Box, GridItem, SimpleGrid } from "@chakra-ui/layout";
+import { Skeleton } from "@chakra-ui/skeleton";
 import React, { useEffect, useState } from "react";
 import { fetchPosts } from "./data";
 import Post from "./post";
+import PostLoader from "./post-placeholder";
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
@@ -19,7 +21,12 @@ const Posts = () => {
         {posts.map((post, pid) => (
           <Post {...post} key={pid} />
         ))}
-        {/* <Post /> */}
+        <Skeleton isLoaded={!loading}>
+          <PostLoader />
+        </Skeleton>
+        <Skeleton isLoaded={!loading}>
+          <PostLoader />
+        </Skeleton>
       </SimpleGrid>
     </Box>
   );

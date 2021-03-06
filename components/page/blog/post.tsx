@@ -25,7 +25,8 @@ const Post = (props) => {
         h={64}
         fit="cover"
         src={props.cover_image}
-        alt="Article"
+        alt={props.title}
+        loading="lazy"
       />
 
       <Box p={6}>
