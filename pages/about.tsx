@@ -1,5 +1,6 @@
 import Layout from "~/components/layout";
 import { Page, PageHeader, StrokeHeader } from "~/components/page";
+import GitGraph from "~/components/page/about/git-contribution";
 import Intro from "~/components/page/about/intro";
 import Services from "~/components/page/about/services";
 import Skills from "~/components/page/about/skills";
@@ -13,6 +14,7 @@ const Home: AppPage = () => {
       <Intro />
       <Services />
       <Skills />
+      <GitGraph />
     </Page>
   );
 };

@@ -68,18 +68,22 @@ const Home: AppPage = () => {
               </NextLink>
             </Button>
           </LinkBox>
-          <Button
-            textTransform="uppercase"
-            w="min-content"
-            alignSelf="center"
-            size="lg"
-            px={8}
-            py={8}
-            variant="outline"
-            colorScheme="brand"
-          >
-            Download CV
-          </Button>
+          <LinkBox>
+            <Button
+              textTransform="uppercase"
+              w="min-content"
+              alignSelf="center"
+              size="lg"
+              px={8}
+              py={8}
+              variant="outline"
+              colorScheme="brand"
+            >
+              <LinkOverlay download href="/cv.pdf">
+                Download CV
+              </LinkOverlay>
+            </Button>
+          </LinkBox>
         </Stack>
       </Stack>
     </Page>

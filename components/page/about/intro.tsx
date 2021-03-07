@@ -41,10 +41,10 @@ const Intro = () => {
             </Text>
           </Flex>
           <Text>
-            I'm a Full Stack Developer based in Lagos, Nigeria. I'm passionate
-            to my work with {diffYears(process.env.devStartYear)} years
-            experience, and I have acquired the skills neccessary to build
-            websites, and apps accross all platforms.
+            I'm a Full Stack Developer based in Lagos, Nigeria. I’m an
+            Open-source enthusiast interested in all forms of programming. I
+            help make great Web, Mobile and Desktop Apps. When I’m not building
+            great software, you can find me at Viki or Netflix.
           </Text>
 
           <SimpleGrid
