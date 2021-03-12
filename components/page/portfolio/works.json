@@ -12,5 +12,12 @@
     "url": "https://arnuay.anubra.tech",
     "stacks": ["React Js", "Chakra UI", "Laravel"],
     "sections": ["frontend", "backend"]
+  },
+  {
+    "name": "Chakra Play",
+    "image": "https://raw.githubusercontent.com/anubra266/chakra-play/f0dd2cdb4f296d4313edafccd766ab5ab1c64690/public/img/preview.png",
+    "url": "https://chakra-play.tk",
+    "stacks": ["React Js", "Chakra UI"],
+    "sections": ["frontend"]
   }
 ]
