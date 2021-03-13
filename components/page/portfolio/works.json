@@ -8,7 +8,7 @@
   },
   {
     "name": "Choc UI",
-    "image": "https://raw.githubusercontent.com/anubra266/choc-ui/blob/b1ecda087c3c64dfe0ff65d5cd4948bdb089c994/public/thumnails/landing.png",
+    "image": "https://raw.githubusercontent.com/anubra266/choc-ui/main/public/thumbnails/landing.png",
     "url": "https://choc-ui.tech",
     "stacks": ["React Js", "Chakra UI", "Next JS"],
     "sections": ["frontend"]
