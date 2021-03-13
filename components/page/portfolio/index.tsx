@@ -14,7 +14,7 @@ const Works = () => {
   const section = sections[current];
   return (
     <Flex mt={16}>
-      <Stack spacing={7}>
+      <Stack spacing={7} mb={8}>
         <Tabs
           variant="unstyled"
           index={current}
