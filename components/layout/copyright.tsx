@@ -15,7 +15,7 @@ const CopyRight = () => {
         lineHeight="80px"
       >
         <Box>
-          <chakra.span color="brand.300"> {process.env.myName}</chakra.span>{" "}
+          <chakra.span color="brand.100"> {process.env.myName}</chakra.span>{" "}
           &copy; {new Date().getFullYear()}
         </Box>
       </Stack>

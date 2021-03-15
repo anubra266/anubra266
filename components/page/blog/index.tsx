@@ -21,12 +21,16 @@ const Posts = () => {
         {posts.map((post, pid) => (
           <Post {...post} key={pid} />
         ))}
-        <Skeleton isLoaded={!loading}>
-          <PostLoader />
-        </Skeleton>
-        <Skeleton isLoaded={!loading}>
-          <PostLoader />
-        </Skeleton>
+        {posts.length < 1 && (
+          <>
+            <Skeleton isLoaded={!loading}>
+              <PostLoader />
+            </Skeleton>
+            <Skeleton isLoaded={!loading}>
+              <PostLoader />
+            </Skeleton>
+          </>
+        )}
       </SimpleGrid>
     </Box>
   );
