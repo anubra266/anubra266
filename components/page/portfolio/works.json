@@ -15,7 +15,7 @@
   },
   {
     "name": "Arnuay",
-    "image": "https://raw.githubusercontent.com/anubra266/arnuay/blob/b304834159848a4d9f76386085c2bd03dfd329ba/public/img/dashboard.png",
+    "image": "https://raw.githubusercontent.com/anubra266/arnuay/main/public/img/dashboard.png",
     "url": "https://arnuay.anubra.tech",
     "stacks": ["React Js", "Chakra UI", "Laravel", "Inertia Js"],
     "sections": ["frontend", "backend"]
