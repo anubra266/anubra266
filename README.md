@@ -4,7 +4,7 @@
 ## Full Stack Developer and Open Source enthusiast.
 ```js
 const abraham = {
-  code: [Javascript, Typescript, HTML, CSS],
+  code: [Javascript, Typescript, HTML, CSS, PHP],
   tools: [React, Node, NextJs, ChakraUI, Jest, Laravel, PHPunit, InertiaJs],
   skill: [Prototyping, Algorithms]
   challenge: "I'm focused on react, typescript and Laravel"
