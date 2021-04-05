@@ -17,12 +17,6 @@ const Abraham = {
 
 [![trophy](https://github-profile-trophy.vercel.app/?username=anubra266&theme=dracula)](https://github.com/anubra266)
 
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=anubra266&repo=choc-ui)](https://github.com/anubra266/choc-ui)
-
-
-
-
-
-
+ 
 </a>
 
