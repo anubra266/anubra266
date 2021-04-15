@@ -1,7 +1,7 @@
-import Layout from "~/components/layout";
-import { Page, PageHeader, StrokeHeader } from "~/components/page";
-import Wrapper from "~/components/page/contact";
-import { AppPage } from "~/types";
+import Layout from "components/layout";
+import { Page, PageHeader, StrokeHeader } from "components/page";
+import Wrapper from "components/page/contact";
+import { AppPage } from "types";
 
 const Contact: AppPage = () => {
   return (

@@ -8,11 +8,11 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import Layout from "~/components/layout";
-import { AppPage } from "~/types";
+import Layout from "components/layout";
+import { AppPage } from "types";
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import NextLink from "next/link";
-import { Page } from "~/components/page";
+import { Page } from "components/page";
 
 const Home: AppPage = () => {
   return (

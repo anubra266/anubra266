@@ -13,14 +13,4 @@ module.exports = {
     email1: "anubra266@gmail.com",
     email2: "anubra2662@gmail.com",
   },
-  webpack: (config, options) => {
-    const custom_alias = {
-      "~": path.resolve("./"),
-    };
-    var aliases = config.resolve.alias;
-
-    aliases = { ...aliases, custom_alias };
-
-    return config;
-  },
 };

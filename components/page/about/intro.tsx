@@ -9,7 +9,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import { diffYears } from "~/helpers/date";
+import { diffYears } from "helpers/date";
 
 const Intro = () => {
   return (
