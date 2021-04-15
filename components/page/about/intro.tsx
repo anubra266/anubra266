@@ -2,6 +2,8 @@ import React from "react";
 import {
   Flex,
   GridItem,
+  LinkBox,
+  LinkOverlay,
   SimpleGrid,
   Skeleton,
   Stack,
@@ -56,7 +58,12 @@ const Intro = () => {
           >
             <Info title="name" value={process.env.myName} />
             <Info title="age" value={diffYears(process.env.dateOfBirth)} />
-            <Info title="phone" value={process.env.phoneNumber1} />
+            <Info
+              title="twitter"
+              value="@anubra266"
+              href={process.env.twitterUrl}
+              lowercase
+            />
             <Info title="address" value={process.env.presentAddress} />
             <Info
               title="experience"
@@ -72,16 +79,29 @@ const Intro = () => {
 
 export default Intro;
 
-const Info = (props: { title: string; value: any }) => (
-  <GridItem
-    as={Flex}
-    textTransform="capitalize"
-    fontWeight="thin"
-    textAlign="left"
-  >
-    <Text fontWeight="normal" mr={2}>
-      {props.title}:
-    </Text>
-    {props.value}
-  </GridItem>
+const Info = (props: {
+  title: string;
+  value: any;
+  lowercase?: boolean;
+  href?: string;
+}) => (
+  <LinkBox>
+    <GridItem
+      as={Flex}
+      textTransform={props.lowercase ? "inherit" : "capitalize"}
+      fontWeight="thin"
+      textAlign="left"
+    >
+      <LinkOverlay
+        textTransform="capitalize"
+        fontWeight="normal"
+        mr={2}
+        target="_blank"
+        href={props.href}
+      >
+        {props.title}:
+      </LinkOverlay>
+      {props.value}
+    </GridItem>
+  </LinkBox>
 );
