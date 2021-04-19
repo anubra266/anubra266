@@ -5,7 +5,7 @@ import { TabList, Tabs } from "@chakra-ui/tabs";
 import PTab from "./portfolio-tab";
 import works from "./works.json";
 import Work from "./work";
-import { WorkProps } from "~/types";
+import { WorkProps } from "types";
 import { Collapse } from "@chakra-ui/transition";
 
 const Works = () => {

@@ -4,7 +4,7 @@ import { Button } from "@chakra-ui/button";
 import { Flex, GridItem, Link, Stack, Text } from "@chakra-ui/layout";
 import { Skeleton } from "@chakra-ui/skeleton";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import { WorkProps } from "~/types";
+import { WorkProps } from "types";
 
 const Work = (props: WorkProps) => {
   const { stacks } = props;
