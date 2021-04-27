@@ -39,7 +39,7 @@ const Navbar = ({ isOpen, onClose }: UseDisclosureReturn) => {
       <Stack h="full" justify="center">
         <NavLink href="/">Home</NavLink>
         <NavLink href="/about">About</NavLink>
-        <NavLink href="/portfolio">Portfolio</NavLink>
+        <NavLink href="/works">Works</NavLink>
         <NavLink href="/blog">Blog</NavLink>
         <NavLink href="/contact">Contact</NavLink>
       </Stack>
