@@ -1,7 +1,7 @@
 import { Tab } from "@chakra-ui/tabs";
 import React from "react";
 
-const PTab = (props: any) => {
+const WTab = (props: any) => {
   return (
     <Tab
       {...props}
@@ -12,4 +12,4 @@ const PTab = (props: any) => {
   );
 };
 
-export default PTab;
+export default WTab;

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Flex, SimpleGrid, Stack } from "@chakra-ui/layout";
 import { TabList, Tabs } from "@chakra-ui/tabs";
 
-import PTab from "./portfolio-tab";
+import PTab from "./works-tab";
 import works from "./works.json";
 import Work from "./work";
 import { WorkProps } from "types";
