@@ -1,4 +1,4 @@
-<a align="center">
+<a align="center">Cancel changes
 
 ```js
 const Abraham = {
@@ -6,7 +6,7 @@ const Abraham = {
   code: [Javascript, Typescript, HTML, CSS, PHP],
   tools: [React, Node, NextJs, ChakraUI, Jest, Laravel, PHPunit, InertiaJs],
   skill: [Prototyping, Algorithms]
-  learning: ["NodeJS", "Mobx", "XState", "Remix"]
+  learning: [NodeJS, Mobx, XState, Remix]
 }
 ```
 
