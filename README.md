@@ -6,7 +6,7 @@ const Abraham = {
   code: [Javascript, Typescript, HTML, CSS, PHP],
   tools: [React, Node, NextJs, ChakraUI, Jest, Laravel, PHPunit, InertiaJs],
   skill: [Prototyping, Algorithms]
-  challenge: "I'm focused on react, typescript and the rest are still fighting for my heart 🙄"
+  learning: ["NodeJS", "Mobx", "XState", "Remix"]
 }
 ```
 
