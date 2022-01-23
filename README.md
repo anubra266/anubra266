@@ -1,4 +1,4 @@
-<a align="center">Cancel changes
+<a align="center">
 
 ```js
 const Abraham = {
