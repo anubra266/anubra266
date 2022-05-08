@@ -78,7 +78,6 @@ const Form = () => {
             setLoading(false);
           },
           (err) => {
-            console.log("err :>> ", err);
             announce(`${err}. Please try again`, "error");
             setLoading(false);
           }
@@ -125,6 +124,7 @@ const Form = () => {
           py={8}
           type="submit"
           isLoading={loading}
+          isDisabled
         >
           Send Message
         </Button>
