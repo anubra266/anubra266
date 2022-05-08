@@ -1,8 +1,6 @@
-import { Box, BoxProps, Flex, Text } from "@chakra-ui/layout";
-import { useToken } from "@chakra-ui/system";
+import { Box, BoxProps, Flex, Text } from "@chakra-ui/react";
 
 export const StrokeHeader = (props: BoxProps) => {
-  const [stroke] = useToken("colors", ["whiteAlpha.400"]);
   return (
     <Text
       textAlign="center"
@@ -12,7 +10,7 @@ export const StrokeHeader = (props: BoxProps) => {
       letterSpacing="wide"
       textTransform="uppercase"
       sx={{
-        WebkitTextStrokeColor: stroke,
+        WebkitTextStrokeColor: "var(--chakra-colors-whiteAlpha-400)",
       }}
       {...props}
     />

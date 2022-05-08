@@ -1,29 +1,15 @@
 [
   {
-    "name": "Ajol",
-    "image": "https://raw.githubusercontent.com/anubra266/ajol/main/public/preview.png",
-    "url": "https://ajol.ml",
-    "stacks": ["React Js", "Chakra UI", "Next JS"],
-    "sections": ["frontend"]
-  },
-  {
     "name": "Choc UI",
     "image": "https://raw.githubusercontent.com/anubra266/choc-ui/main/public/thumbnails/landing.png",
-    "url": "https://choc-ui.tech",
+    "url": "https://choc-ui.com",
     "stacks": ["React Js", "Chakra UI", "Next JS"],
     "sections": ["frontend"]
-  },
-  {
-    "name": "Arnuay",
-    "image": "https://raw.githubusercontent.com/anubra266/arnuay/main/public/img/dashboard.png",
-    "url": "https://arnuay.anubra.tech",
-    "stacks": ["React Js", "Chakra UI", "Laravel", "Inertia Js"],
-    "sections": ["frontend", "backend"]
   },
   {
     "name": "Chakra Play",
     "image": "https://raw.githubusercontent.com/anubra266/chakra-play/f0dd2cdb4f296d4313edafccd766ab5ab1c64690/public/img/preview.png",
-    "url": "https://chakra-play.tk",
+    "url": "https://chakra-play.vercel.app",
     "stacks": ["React Js", "Chakra UI"],
     "sections": ["frontend"]
   }

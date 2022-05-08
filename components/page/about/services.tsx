@@ -43,7 +43,7 @@ const Services = () => {
         />
         <Service
           service="API"
-          details="I help you give your customers the medium to interact with your software through their softwares."
+          details="I help you give your customers the medium to interact with your software through their software."
           icon={AiFillApi}
         />
         <Service

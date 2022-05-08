@@ -1,6 +1,8 @@
 import {
   Button,
+  Flex,
   IconButton,
+  Image,
   Link,
   LinkBox,
   LinkOverlay,
@@ -27,9 +29,7 @@ const Home: AppPage = () => {
         >
           {process.env.myName}
         </Text>
-        <Text fontSize={["xl", "3xl"]}>
-          An open source enthusiast & Full Stack Developer
-        </Text>
+        <Text fontSize={["xl", "3xl"]}>Developer & Open source enthusiast</Text>
         <Stack justify="center" direction="row" spacing="5">
           <SocialIcon
             aria-label="Github"
@@ -52,37 +52,10 @@ const Home: AppPage = () => {
           justify="center"
           spacing={["3", "6"]}
         >
-          <LinkBox>
-            <Button
-              textTransform="uppercase"
-              w="min-content"
-              alignSelf="center"
-              size="lg"
-              px={8}
-              py={8}
-              colorScheme="brand"
-            >
-              <NextLink href="/contact">
-                <LinkOverlay>Contact me</LinkOverlay>
-              </NextLink>
-            </Button>
-          </LinkBox>
-          <LinkBox>
-            <Button
-              textTransform="uppercase"
-              w="min-content"
-              alignSelf="center"
-              size="lg"
-              px={8}
-              py={8}
-              variant="outline"
-              colorScheme="brand"
-            >
-              <LinkOverlay download href="/cv.pdf">
-                Download CV
-              </LinkOverlay>
-            </Button>
-          </LinkBox>
+          <Flex gap="3" align="center" fontWeight="medium" fontSize="xl">
+            <Image src="/choc-logo.png" boxSize="8" />
+            Creator, Choc UI
+          </Flex>
         </Stack>
       </Stack>
     </Page>

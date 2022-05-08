@@ -42,7 +42,7 @@ const Intro = () => {
               Hello! I am {process.env.myName}
             </Text>
           </Flex>
-          <Text>
+          <Text lineHeight="9">
             I'm a Full Stack Developer based in Lagos, Nigeria. I’m an
             Open-source enthusiast interested in all forms of programming. I
             help make great Web, Mobile and Desktop Apps. When I’m not building
@@ -57,7 +57,7 @@ const Intro = () => {
             spacingY={3}
           >
             <Info title="name" value={process.env.myName} />
-            <Info title="age" value={diffYears(process.env.dateOfBirth)} />
+            <Info title="age" value="Just a number 😉" />
             <Info
               title="twitter"
               value="@anubra266"
@@ -67,9 +67,9 @@ const Intro = () => {
             <Info title="address" value={process.env.presentAddress} />
             <Info
               title="experience"
-              value={`${diffYears(process.env.devStartYear)} Years`}
+              value="As much as you need 😎"
             />
-            <Info title="freelance" value={process.env.freelanceStatus} />
+            <Info title="Open source" value={process.env.freelanceStatus} />
           </SimpleGrid>
         </Stack>
       </GridItem>

@@ -7,6 +7,8 @@ import {
   Spacer,
   Stack,
   Text,
+  TextProps,
+  GridItemProps,
 } from "@chakra-ui/layout";
 import { Progress } from "@chakra-ui/progress";
 import { IconType } from "react-icons";
@@ -19,7 +21,13 @@ import {
   IoLogoVue,
   IoLogoWordpress,
 } from "react-icons/io5";
-import { SiBootstrap, SiNextDotJs, SiPhp, SiSvelte, SiTailwindcss } from "react-icons/si";
+import {
+  SiBootstrap,
+  SiNextdotjs,
+  SiPhp,
+  SiSvelte,
+  SiTailwindcss,
+} from "react-icons/si";
 
 const Skills = () => {
   return (
@@ -34,23 +42,32 @@ const Skills = () => {
         px={4}
         py={12}
       >
-        <Skill name="HTML" level={95} icon={IoLogoHtml5} />
-        <Skill name="CSS" level={87} icon={IoLogoCss3} />
-        <Skill name="Javascript" level={80} icon={IoLogoJavascript} />
+        <Skill name="HTML" level={99} icon={IoLogoHtml5} />
+        <Skill name="CSS" level={99} icon={IoLogoCss3} />
+        <Skill name="Javascript" level={99} icon={IoLogoJavascript} />
 
-        <Skill name="ReactJs" level={87} icon={IoLogoReact} />
-        <Skill name="VueJs" level={75} icon={IoLogoVue} />
-        <Skill name="Svelte" level={60} icon={SiSvelte} />
+        <Skill name="ReactJs" level={99} icon={IoLogoReact} />
+        <Skill name="VueJs" level={99} icon={IoLogoVue} />
+        <Skill name="Svelte" level={99} icon={SiSvelte} />
 
-        <Skill name="PHP" level={85} icon={SiPhp} />
-        <Skill name="Laravel" level={85} icon={IoLogoLaravel} />
-        <Skill name="Wordpress" level={80} icon={IoLogoWordpress} />
+        <Skill name="PHP" level={99} icon={SiPhp} />
+        <Skill name="Laravel" level={99} icon={IoLogoLaravel} />
+        <Skill name="Wordpress" level={99} icon={IoLogoWordpress} />
 
-        <Skill name="Chakra UI" level={87} icon={ChakraLogo} />
-        <Skill name="Bootstrap" level={85} icon={SiBootstrap} />
-        <Skill name="Tailwind" level={82} icon={SiTailwindcss} />
+        <Skill name="Chakra UI" level={99} icon={ChakraLogo} />
+        <Skill name="Bootstrap" level={99} icon={SiBootstrap} />
+        <Skill name="Tailwind" level={99} icon={SiTailwindcss} />
 
-        <Skill name="Next Js" level={80} icon={SiNextDotJs} />
+        <Skill name="Next Js" level={99} icon={SiNextdotjs} />
+        <Skill
+          name="...All other technologies. I mean what's google for? 😒"
+          color="green.200"
+          fontWeight="medium"
+          level={99}
+          gridProps={{
+            colSpan: 2,
+          }}
+        />
       </SimpleGrid>
     </Box>
   );
@@ -58,23 +75,35 @@ const Skills = () => {
 
 export default Skills;
 
-const Skill = (props: { name: string; level: number; icon: IconType }) => {
+const Skill = ({
+  name,
+  level,
+  icon,
+  gridProps,
+  ...rest
+}: {
+  name: string;
+  level: number;
+  icon?: IconType;
+  gridProps?: GridItemProps;
+} & TextProps) => {
   return (
-    <GridItem>
+    <GridItem {...gridProps}>
       <Stack spacing={5}>
         <Flex>
-          <Icon as={props.icon} fontSize="xl" mr={2} my="auto" />
+          {icon && <Icon as={icon} fontSize="xl" mr={2} my="auto" />}
           <Text
             fontWeight="500"
             textTransform="uppercase"
             letterSpacing="wider"
+            {...rest}
           >
-            {props.name}
+            {name}
           </Text>
           <Spacer />
-          <Text fontWeight="thin">{props.level}%</Text>
+          <Text fontWeight="thin">{level}%</Text>
         </Flex>
-        <Progress value={props.level} colorScheme="brand" size="xs" hasStripe />
+        <Progress value={level} colorScheme="brand" size="xs" hasStripe />
       </Stack>
     </GridItem>
   );

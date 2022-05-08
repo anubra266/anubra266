@@ -6,8 +6,6 @@ module.exports = {
     linkedinUrl: "https://linkedin.com/in/anubra266",
     emailAddress: "anubra266@gmail.com",
     myName: "Abraham Anuoluwapo",
-    devStartYear: 2015,
-    dateOfBirth: 2001,
     presentAddress: "Lagos, Nigeria",
     freelanceStatus: "available",
     email1: "anubra266@gmail.com",

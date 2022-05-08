@@ -56,32 +56,33 @@ const Form = () => {
   const handleSubmit = (e: any) => {
     e.preventDefault();
     if (validateData()) {
-      // setLoading(true);
-      // let templateParams = {
-      //   from_name: name.value,
-      //   from_email: email.value,
-      //   to_name: process.env.myName,
-      //   subject: subject.value,
-      //   message: message.value,
-      // };
-      // emailjs
-      //   .send(
-      //     "service_lpbnls3",
-      //     "template_1qcfjt3",
-      //     templateParams,
-      //     "user_Q4UfbP80V0crFqe5nhEHd"
-      //   )
-      //   .then(
-      //     () => {
-      //       reset();
-      //       announce("Your message was sent successfully", "success");
-      //       setLoading(false);
-      //     },
-      //     (err) => {
-      //       console.log("err :>> ", err);
-      //       announce(`${err}. Please try again`, "error");
-      //     }
-      //   );
+      setLoading(true);
+      let templateParams = {
+        from_name: name.value,
+        from_email: email.value,
+        to_name: process.env.myName,
+        subject: subject.value,
+        message: message.value,
+      };
+      emailjs
+        .send(
+          process.env.EMAIL_SERVICE_ID,
+          process.env.EMAIL_TEMPLATE_ID,
+          templateParams,
+          process.env.EMAIL_USER_ID
+        )
+        .then(
+          () => {
+            reset();
+            announce("Your message was sent successfully", "success");
+            setLoading(false);
+          },
+          (err) => {
+            console.log("err :>> ", err);
+            announce(`${err}. Please try again`, "error");
+            setLoading(false);
+          }
+        );
     }
   };
 
