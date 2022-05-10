@@ -33,7 +33,7 @@ const Skills = () => {
   return (
     <Box>
       <SimpleGrid
-        columns={[1, , 2, 3]}
+        columns={[1, , , 2, 3]}
         spacingX="8"
         spacingY="10"
         mb={8}
