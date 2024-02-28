@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: `Abraham A. Aremu (aka anubra266) - Software Engineer and Open Source Enthusiast`,
   description: `Software engineer passionate about UI, accessibility and DX.`,
   openGraph: {
-    images: ["/api/og"],
+    images: ["https://portfolio-anubra266.vercel.app/api/og"],
   },
 };
 
