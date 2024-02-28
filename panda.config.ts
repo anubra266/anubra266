@@ -9,4 +9,5 @@ export default defineConfig({
     extend: {},
   },
   outdir: "styled-system",
+  strictTokens: true,
 });

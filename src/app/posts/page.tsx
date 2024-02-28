@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { getAllPosts } from "../../lib/api";
 import DateFormatter from "@/app/components/date-formatter";
 import { css } from "styled-system/css";
+import { getAllPosts } from "@/lib/api";
 
 export default function Index() {
   const posts = getAllPosts();
@@ -14,7 +14,7 @@ export default function Index() {
             mb: "8",
             fontSize: "5xl",
             lineHeight: "tight",
-            md: { fontSize: "7xl", lineHeight: "7xl" },
+            md: { fontSize: "7xl", lineHeight: "tight" },
             fontWeight: "bold",
             letterSpacing: "tighter",
           })}
@@ -24,14 +24,14 @@ export default function Index() {
         <div
           className={css({
             display: "grid",
-            gridTemplateColumns: "cols.1",
+            gridTemplateColumns: "1",
             md: {
-              gridTemplateColumns: "cols.2",
-              columnGap: "x.16",
-              rowGap: "y.32",
+              gridTemplateColumns: "2",
+              columnGap: "16",
+              rowGap: "32",
             },
-            lg: { columnGap: "x.32" },
-            rowGap: "y.20",
+            lg: { columnGap: "32" },
+            rowGap: "20",
             mb: "32",
           })}
         >
@@ -55,7 +55,7 @@ export default function Index() {
                 </Link>
               </h3>
               <div
-                className={css({ fontSize: "lg", lineHeight: "lg", mb: "4" })}
+                className={css({ fontSize: "lg", lineHeight: "snug", mb: "4" })}
               >
                 <DateFormatter dateString={post.date} />
               </div>

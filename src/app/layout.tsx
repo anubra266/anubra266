@@ -3,6 +3,9 @@ import { Inter } from "next/font/google";
 
 import "./globals.css";
 import { css } from "styled-system/css";
+import { Header } from "@/app/components/header";
+import { Footer } from "@/app/components/footer";
+import { flex } from "styled-system/patterns";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -75,7 +78,18 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
       <body className={inter.className}>
-        <div className={css({ minH: "screen" })}>{children}</div>
+        <div
+          className={flex({
+            direction: "column",
+            mx: "auto",
+            minH: "screen",
+            maxW: "[1288px]",
+          })}
+        >
+          <Header />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

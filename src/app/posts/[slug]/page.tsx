@@ -29,7 +29,7 @@ export default async function Post({ params }: Params) {
           <img src={post.coverImage} alt={post.title} />
         </div>
         <div className={css({ maxW: "2xl", ml: "auto", mr: "auto" })}>
-          <div className={css({ mb: "6", fontSize: "lg", lineHeight: "lg" })}>
+          <div className={css({ mb: "6", fontSize: "lg", lineHeight: "snug" })}>
             <DateFormatter dateString={post.date} />
           </div>
         </div>
