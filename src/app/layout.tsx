@@ -39,13 +39,36 @@ export default function RootLayout({
           sizes="16x16"
           href="https://avatars.githubusercontent.com/u/30869823?s=16&v=4"
         />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:domain"
+          content="portfolio-anubra266.vercel.app"
+        />
+        <meta property="twitter:url" content="https://x.com/anubra266" />
+        <meta
+          name="twitter:title"
+          content="Abraham A. Aremu (aka anubra266) - Software Engineer and Open Source Enthusiast"
+        />
+        <meta
+          name="twitter:description"
+          content="Software engineer passionate about UI, accessibility and DX."
+        />
+        <meta
+          name="twitter:image"
+          content="https://portfolio-anubra266.vercel.app/api/og"
+        />
+
         <link rel="manifest" href="/favicon/site.webmanifest" />
         <link
           rel="mask-icon"
           href="/favicon/safari-pinned-tab.svg"
           color="#000000"
         />
-        <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/30869823?s=16&v=4" />
+        <link
+          rel="shortcut icon"
+          href="https://avatars.githubusercontent.com/u/30869823?s=16&v=4"
+        />
         <meta name="msapplication-TileColor" content="#000000" />
 
         <meta name="theme-color" content="#000" />
