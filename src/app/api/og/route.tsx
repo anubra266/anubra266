@@ -21,27 +21,25 @@ export async function GET() {
       >
         <img
           src="https://avatars.githubusercontent.com/u/30869823?s=96&v=4"
-          height={100}
-          width={100}
+          height={140}
+          width={140}
           style={{
-            height: "100",
-            width: "100",
             borderRadius: "50%",
             padding: 6,
             border: "solid 6px #FFF",
           }}
         />
 
-        <div style={{ marginTop: 40, fontSize: 32, fontWeight: 600 }}>
+        <div style={{ marginTop: 10, fontSize: 70, fontWeight: 700 }}>
           Abraham A. Aremu
         </div>
-        <div style={{ marginTop: 10, fontSize: 18, fontWeight: 400 }}>
+        <div style={{ marginTop: 10, fontSize: 28.5, fontWeight: 400 }}>
           Software Engineer and Open source Enthusiast
         </div>
         <div
           style={{
             marginTop: 10,
-            fontSize: 30,
+            fontSize: 40,
             fontWeight: 400,
             display: "flex",
           }}
@@ -50,7 +48,6 @@ export async function GET() {
         </div>
       </div>
     ),
-
     {
       width: 1200,
       height: 630,
