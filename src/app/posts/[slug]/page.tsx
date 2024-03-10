@@ -29,7 +29,9 @@ export default async function Post({ params }: Params) {
           <img src={post.coverImage} alt={post.title} />
         </div>
         <div className={css({ maxW: "2xl", ml: "auto", mr: "auto" })}>
-          <div className={css({ mb: "6", fontSize: "lg", lineHeight: "snug" })}>
+          <div
+            className={css({ mb: "6", fontSize: "lg", lineHeight: "normal" })}
+          >
             <DateFormatter dateString={post.date} />
           </div>
         </div>
@@ -56,14 +58,14 @@ const markdown = cva({
 
     "& h2": {
       fontSize: "3xl",
-      lineHeight: "snug",
+      lineHeight: "normal",
       mt: "12",
       mb: "4",
     },
 
     "& h3": {
       fontSize: "2xl",
-      lineHeight: "snug",
+      lineHeight: "normal",
       mt: "8",
       mb: "4",
     },

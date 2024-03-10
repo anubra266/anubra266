@@ -40,7 +40,7 @@ export default function Index() {
               <h3
                 className={css({
                   fontSize: "3xl",
-                  lineHeight: "snug",
+                  lineHeight: "normal",
                   mb: "3",
                 })}
               >
@@ -55,7 +55,11 @@ export default function Index() {
                 </Link>
               </h3>
               <div
-                className={css({ fontSize: "lg", lineHeight: "snug", mb: "4" })}
+                className={css({
+                  fontSize: "lg",
+                  lineHeight: "normal",
+                  mb: "4",
+                })}
               >
                 <DateFormatter dateString={post.date} />
               </div>

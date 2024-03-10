@@ -5,6 +5,7 @@ import "./globals.css";
 import { Header } from "~/components/header";
 import { Footer } from "~/components/footer";
 import { flex } from "styled-system/patterns";
+import { Providers } from "~/app/providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link
           rel="apple-touch-icon"
@@ -77,18 +78,20 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
       <body className={inter.className}>
-        <div
-          className={flex({
-            direction: "column",
-            mx: "auto",
-            minH: "screen",
-            maxW: "[1288px]",
-          })}
-        >
-          <Header />
-          {children}
-          <Footer />
-        </div>
+        <Providers>
+          <div
+            className={flex({
+              direction: "column",
+              mx: "auto",
+              minH: "screen",
+              maxW: "[1288px]",
+            })}
+          >
+            <Header />
+            {children}
+            <Footer />
+          </div>
+        </Providers>
       </body>
     </html>
   );
