@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getAllPosts } from "../lib/api";
-import DateFormatter from "@/app/components/date-formatter";
+import DateFormatter from "~/components/date-formatter";
 import { css } from "styled-system/css";
 
 export default function Index() {
@@ -8,9 +8,7 @@ export default function Index() {
 
   return (
     <main>
-      <section>
-        
-      </section>
+      <section></section>
     </main>
   );
 }

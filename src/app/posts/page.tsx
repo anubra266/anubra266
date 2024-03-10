@@ -1,7 +1,7 @@
 import Link from "next/link";
-import DateFormatter from "@/app/components/date-formatter";
+import DateFormatter from "~/components/date-formatter";
 import { css } from "styled-system/css";
-import { getAllPosts } from "@/lib/api";
+import { getAllPosts } from "~/lib/api";
 
 export default function Index() {
   const posts = getAllPosts();

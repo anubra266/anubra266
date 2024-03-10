@@ -1,6 +1,6 @@
 "use client";
 
-import { ROUTES } from "@/app/components/header";
+import { ROUTES } from "~/components/header";
 import Link from "next/link";
 import { css } from "styled-system/css";
 import { flex } from "styled-system/patterns";
