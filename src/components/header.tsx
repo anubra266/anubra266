@@ -14,11 +14,6 @@ import {
   Twitter,
 } from "lucide-react";
 import { HStack, Stack } from "styled-system/jsx";
-import { Avatar } from "~/components/ui/avatar";
-import { Link as A } from "~/components/ui/link";
-import * as HoverCard from "~/components/ui/hover-card";
-import { Icon } from "~/components/ui/icon";
-import { Text } from "~/components/ui/text";
 
 export function Header() {
   const pathname = usePathname();
@@ -42,7 +37,7 @@ export function Header() {
           borderRadius: "full",
           borderStyle: "solid",
           borderWidth: "[4px]",
-          borderColor: "gray.8",
+          borderColor: "[fg.default/70]",
           p: "[1.5px]",
         })}
       />
@@ -58,7 +53,10 @@ export function Header() {
                 px: "6",
                 py: "3",
                 pos: "relative",
-                color: { base: "[black/60]", _active: "black" },
+                color: {
+                  base: "[fg.default/60]",
+                  _active: "fg.default",
+                },
                 _after: {
                   pos: "absolute",
                   content: '""',
@@ -72,10 +70,10 @@ export function Header() {
                   transition: "[all ease 0.2s]",
                 },
                 _active: {
-                  bg: { _after: "gray.8" },
+                  bg: { _after: "fg.default" },
                 },
                 _hover: {
-                  bg: { _after: "gray.8" },
+                  bg: { _after: "fg.default" },
                 },
               })}
             >
@@ -85,52 +83,7 @@ export function Header() {
         ))}
       </ul>
 
-      <HoverCard.Root openDelay={100}>
-        <HoverCard.Trigger asChild>
-          <A href="https://github.com/anubra266/">@anubra266</A>
-        </HoverCard.Trigger>
-
-        <HoverCard.Positioner>
-          <HoverCard.Content>
-            <HoverCard.Arrow>
-              <HoverCard.ArrowTip />
-            </HoverCard.Arrow>
-            <Stack gap="4" direction="row">
-              <Avatar
-                name="Abraham A. Aremu"
-                src="https://avatars.githubusercontent.com/u/30869823"
-              />
-              <Stack gap="3">
-                <Stack gap="1">
-                  <Text size="sm" fontWeight="semibold">
-                    @anubra266
-                  </Text>
-                  <Text size="sm" color="fg.muted">
-                    I'd prefer you find me on Github, but here are your choices;
-                  </Text>
-                </Stack>
-                <HStack gap="4">
-                  {SOCIALS.map((social) => (
-                    <a
-                      key={social.label}
-                      title={social.label}
-                      href={social.href}
-                    >
-                      <social.icon size={20} />
-                    </a>
-                  ))}
-                </HStack>
-                <HStack gap="1" color="fg.subtle">
-                  <Icon size="sm">
-                    <MapPinIcon />
-                  </Icon>
-                  <Text size="xs">Fairfield, Iowa. USA</Text>
-                </HStack>
-              </Stack>
-            </Stack>
-          </HoverCard.Content>
-        </HoverCard.Positioner>
-      </HoverCard.Root>
+      <span>@anubra266</span>
     </nav>
   );
 }

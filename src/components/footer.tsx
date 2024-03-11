@@ -15,7 +15,9 @@ export function Footer() {
           mt: "[60px]",
         })}
       >
-        <span className={css({ color: "[[black/87]]" })}>Abraham A.</span>
+        <span className={css({ color: "fg.default", fontWeight: "medium" })}>
+          Abraham A.
+        </span>
 
         <ul className={flex({ align: "center", gap: "4" })}>
           {ROUTES.map((route) => (
@@ -26,7 +28,7 @@ export function Footer() {
                   px: "6",
                   py: "3",
                   pos: "relative",
-                  color: "[black/38]",
+                  color: "[fg.default/80]",
                 })}
               >
                 {route.label}
@@ -41,7 +43,7 @@ export function Footer() {
             gap: "3",
             cursor: "pointer",
             transition: "[all ease 0.2s]",
-            color: { base: "[black/60]", _hover: "black" },
+            color: { base: "[fg.default/60]", _hover: "fg.default" },
           })}
           onClick={() => {
             window.scrollTo({ top: 0, behavior: "smooth" });
