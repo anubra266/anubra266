@@ -1,4 +1,3 @@
-import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { css } from "styled-system/css";
 

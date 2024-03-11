@@ -35,6 +35,32 @@ export default defineConfig({
           },
         },
       },
+      keyframes: {
+        blink: {
+          "90%": {
+            transform: "none",
+            animationTimingFunction: "ease-in",
+          },
+          "93%": {
+            transform: "translateY(15px) scaleY(0)",
+          },
+          "100%": {
+            animationTimingFunction: "ease-out",
+          },
+        },
+        squeeze: {
+          "90%": {
+            transform: "none",
+            animationTimingFunction: "ease-in",
+          },
+          "93%": {
+            transform: "translateY(3px) scaleY(0.8)",
+          },
+          "100%": {
+            animationTimingFunction: "ease-out",
+          },
+        },
+      },
     },
   },
   globalCss: {
