@@ -4,6 +4,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { css } from "styled-system/css";
 import { flex } from "styled-system/patterns";
+import { link } from "styled-system/recipes";
 import Link from "next/link";
 
 import {
@@ -13,7 +14,7 @@ import {
   MapPinIcon,
   Twitter,
 } from "lucide-react";
-import { HStack, Stack } from "styled-system/jsx";
+import { ThemeToggle } from "~/components/theme-toggle";
 
 export function Header() {
   const pathname = usePathname();
@@ -83,7 +84,16 @@ export function Header() {
         ))}
       </ul>
 
-      <span>@anubra266</span>
+      <div className={flex({ align: "center", gap: "4" })}>
+        <a
+          href="https://github.com/anubra266"
+          target="_blank"
+          className={link()}
+        >
+          @anubra266
+        </a>
+        <ThemeToggle />
+      </div>
     </nav>
   );
 }

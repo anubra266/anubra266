@@ -1,4 +1,5 @@
 import { defineConfig } from "@pandacss/dev";
+import { recipes } from "~/theme/recipes";
 
 export default defineConfig({
   // hash: true,
@@ -7,6 +8,7 @@ export default defineConfig({
   include: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      recipes,
       semanticTokens: {
         colors: {
           bg: {
@@ -17,7 +19,7 @@ export default defineConfig({
               value: { base: "{colors.white}", _dark: "#222222" },
             },
             subtle: {
-              value: { base: "#f5f5f5", _dark: "#333333" },
+              value: { base: "{colors.gray.200}", _dark: "#333333" },
             },
           },
           fg: {
