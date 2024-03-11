@@ -4,7 +4,7 @@ export default defineConfig({
   // hash: true,
   // minify: true,
   preflight: true,
-  include: ["./src/app/**/*.{js,ts,jsx,tsx}"],
+  include: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       semanticTokens: {
