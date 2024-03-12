@@ -2,13 +2,14 @@
 
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { css } from "styled-system/css";
+import { css, cx } from "styled-system/css";
 import { flex } from "styled-system/patterns";
 import { link } from "styled-system/recipes";
 import Link from "next/link";
 
 import { ThemeToggle } from "~/components/theme-toggle";
 import { BLinkingEye } from "~/components/blinking-eye";
+import { MobileNavbar } from "~/components/mobile-navbar";
 
 export function Header() {
   const pathname = usePathname();
@@ -20,10 +21,11 @@ export function Header() {
       className={flex({
         align: "center",
         justify: "space-between",
-        mt: "[60px]",
+        mt: { base: "10", lg: "[60px]" },
       })}
     >
-      <div
+      <Link
+        href="/"
         className={css({
           flex: "1",
         })}
@@ -31,8 +33,8 @@ export function Header() {
         <Image
           alt="Handsome Abraham 😉"
           src="https://avatars.githubusercontent.com/u/30869823?s=512&v=4"
-          width={56}
-          height={56}
+          width={40}
+          height={40}
           className={css({
             borderRadius: "full",
             borderStyle: "solid",
@@ -41,9 +43,15 @@ export function Header() {
             p: "[1.5px]",
           })}
         />
-      </div>
+      </Link>
 
-      <div className={flex({ align: "center", flex: "1" })}>
+      <div
+        className={flex({
+          hideBelow: "md",
+          align: "center",
+          flex: "1",
+        })}
+      >
         <ul className={flex({ align: "center", gap: "4" })}>
           {ROUTES.map((route) => (
             <li key={route.href}>
@@ -53,7 +61,7 @@ export function Header() {
                 href={route.href}
                 className={flex({
                   align: "center",
-                  gap: "0.5",
+                  gap: "2",
                   px: "6",
                   py: "3",
                   pos: "relative",
@@ -82,9 +90,9 @@ export function Header() {
                   },
                 })}
               >
-                {route.label}
                 {/* //TODO: should not show on resume page */}
                 {route.label === "Resume" && <BLinkingEye />}
+                {route.label}
               </Link>
             </li>
           ))}
@@ -102,11 +110,12 @@ export function Header() {
         <a
           href="https://github.com/anubra266"
           target="_blank"
-          className={link()}
+          className={cx(link(), css({ hideBelow: "md" }))}
         >
           @anubra266
         </a>
         <ThemeToggle />
+        <MobileNavbar />
       </div>
     </nav>
   );

@@ -9,6 +9,25 @@ export default defineConfig({
   theme: {
     extend: {
       recipes,
+      tokens: {
+        shadows: {
+          "01": { value: "0px 12px 24px rgba(0, 0, 0, 0.08)" },
+          "02": { value: "0px 16px 24px rgba(0, 0, 0, 0.12)" },
+          "03": { value: "0px 32px 40px rgba(0, 0, 0, 0.16)" },
+        },
+        colors: {
+          grey: {
+            "00": { value: "#FFFFFF" },
+            "01": { value: "#F2F2F2" },
+            "02": { value: "#E0E0E0" },
+            "03": { value: "#BDBDBD" },
+            "04": { value: "#828282" },
+            "05": { value: "#4F4F4F" },
+            "06": { value: "#333333" },
+            "07": { value: "#111111" },
+          },
+        },
+      },
       semanticTokens: {
         colors: {
           bg: {
@@ -27,10 +46,7 @@ export default defineConfig({
               value: { base: "{colors.black}", _dark: "{colors.white}" },
             },
             subtle: {
-              value: { base: "{colors.black/60}", _dark: "{colors.white/60}" },
-            },
-            muted: {
-              value: { base: "{colors.black/70}", _dark: "{colors.white/60}" },
+              value: { base: "{colors.black/60}", _dark: "{colors.white/70}" },
             },
           },
         },

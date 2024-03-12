@@ -4,7 +4,7 @@ import { css } from "styled-system/css";
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
 
-  return (
+  return ( 
     <button
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
       className={css({
@@ -23,9 +23,9 @@ export function ThemeToggle() {
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         className={css({
           "& .sun": {
             fill: { base: "black", _dark: "transparent" },

@@ -8,7 +8,8 @@ export function BLinkingEye() {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       xmlns="http://www.w3.org/2000/svg"
       className={css({
-        w: "7",
+        opacity: "[0.7]",
+        w: "5",
         h: "6",
         "& #mask > rect": {
           fill: "white",

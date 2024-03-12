@@ -62,6 +62,11 @@ export default function RootLayout({
           content="https://portfolio-anubra266.vercel.app/api/og"
         />
 
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+
         <link rel="manifest" href="/favicon/site.webmanifest" />
         <link
           rel="mask-icon"
@@ -85,6 +90,7 @@ export default function RootLayout({
               mx: "auto",
               minH: "screen",
               maxW: "[1288px]",
+              px: { base: "4", lg: "10", xl: "0" },
             })}
           >
             <Header />

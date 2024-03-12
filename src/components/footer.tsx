@@ -19,14 +19,20 @@ export function Footer() {
         <span
           className={css({
             color: "fg.default",
-            fontWeight: "medium",
             flex: "1",
           })}
         >
-          Abraham A.
+          © {new Date().getFullYear()} Abraham A.
         </span>
 
-        <ul className={flex({ align: "center", gap: "4", flex: "1" })}>
+        <ul
+          className={flex({
+            hideBelow: "md",
+            alignItems: "center",
+            gap: "4",
+            flex: "1",
+          })}
+        >
           {ROUTES.map((route) => (
             <li key={route.href}>
               <Link
