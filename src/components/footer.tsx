@@ -4,6 +4,7 @@ import { ROUTES } from "~/components/header";
 import Link from "next/link";
 import { css } from "styled-system/css";
 import { flex } from "styled-system/patterns";
+import { button } from "styled-system/recipes";
 
 export function Footer() {
   return (
@@ -58,12 +59,9 @@ export function Footer() {
           })}
         >
           <button
-            className={flex({
-              align: "center",
-              gap: "3",
-              cursor: "pointer",
-              transition: "[all ease 0.2s]",
-              color: { base: "[fg.default/60]", _hover: "fg.default" },
+            className={button({
+              variant: "secondary",
+              // color: { base: "[fg.default/60]", _hover: "fg.default" },
             })}
             onClick={() => {
               window.scrollTo({ top: 0, behavior: "smooth" });

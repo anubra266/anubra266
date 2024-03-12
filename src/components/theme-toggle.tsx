@@ -1,21 +1,24 @@
 import { useTheme } from "next-themes";
-import { css } from "styled-system/css";
+import { css, cx } from "styled-system/css";
+import { button } from "styled-system/recipes";
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
 
-  return ( 
+  return (
     <button
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className={css({
-        cursor: "pointer",
-        w: "8",
-        h: "8",
-        p: "1.5",
-        transition: "[all 0.2s]",
-        rounded: "sm",
-        _hover: { bg: "bg.subtle" },
-      })}
+      className={cx(
+        button({
+          variant: "secondary",
+        }),
+        css({
+          cursor: "pointer",
+          w: "8",
+          h: "8",
+          p: "1.5",
+        })
+      )}
     >
       <svg
         width="auto"

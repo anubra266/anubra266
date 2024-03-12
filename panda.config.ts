@@ -25,6 +25,8 @@ export default defineConfig({
             "05": { value: "#4F4F4F" },
             "06": { value: "#333333" },
             "07": { value: "#111111" },
+            "08": { value: "#2A2A2A" },
+            "09": { value: "#3A3A3A" },
           },
         },
       },
@@ -32,7 +34,7 @@ export default defineConfig({
         colors: {
           bg: {
             canvas: {
-              value: { base: "{colors.white}", _dark: "#2a2a2a" },
+              value: { base: "{colors.white}", _dark: "{colors.grey.08}" },
             },
             default: {
               value: { base: "{colors.white}", _dark: "#222222" },
