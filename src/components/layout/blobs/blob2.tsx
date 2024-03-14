@@ -13,16 +13,16 @@ export function Blob2({ css: cssProp }: { css?: SystemStyleObject }) {
     >
       <g filter="url(#filter0_f_660_3831)">
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M490.467 926.923C661.358 930.292 821.167 822.592 868.496 658.586C911.917 508.124 806.091 368.485 677.471 278.913C557.956 195.682 402.352 167.32 283.084 250.903C158.122 338.474 111.027 498.777 155.742 644.536C203.04 798.718 329.014 923.741 490.467 926.923Z"
           fill="url(#paint0_linear_660_3831)"
         />
       </g>
       <g filter="url(#filter1_f_660_3831)">
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M515.239 987.729C425.286 989.533 328.578 957.301 300.311 871.763C271.689 785.151 329.012 700.344 402.412 646.308C477.416 591.091 577.06 558.013 652.724 612.321C729.52 667.442 737.739 774.805 705.205 863.64C676.425 942.226 598.806 986.052 515.239 987.729Z"
           fill="url(#paint1_linear_660_3831)"
         />
@@ -35,9 +35,9 @@ export function Blob2({ css: cssProp }: { css?: SystemStyleObject }) {
           width="1139.2"
           height="1126.4"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -56,9 +56,9 @@ export function Blob2({ css: cssProp }: { css?: SystemStyleObject }) {
           width="630.4"
           height="603.2"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -78,8 +78,8 @@ export function Blob2({ css: cssProp }: { css?: SystemStyleObject }) {
           y2="200.6"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FC50B7" />
-          <stop offset="1" stop-color="#FFC56F" stop-opacity="0.46" />
+          <stop stopColor="#FC50B7" />
+          <stop offset="1" stopColor="#FFC56F" stopOpacity="0.46" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_660_3831"
@@ -89,9 +89,9 @@ export function Blob2({ css: cssProp }: { css?: SystemStyleObject }) {
           y2="584.6"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FF08AB" />
-          <stop offset="1" stop-color="#F58A25" stop-opacity="0" />
-          <stop offset="1" stop-color="#7061A3" stop-opacity="0" />
+          <stop stopColor="#FF08AB" />
+          <stop offset="1" stopColor="#F58A25" stopOpacity="0" />
+          <stop offset="1" stopColor="#7061A3" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>

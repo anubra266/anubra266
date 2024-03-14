@@ -23,6 +23,7 @@ export function Header() {
         justify: "space-between",
         mt: { base: "10", lg: "[60px]" },
         pb: "1",
+        px: "[var(--padding)]",
       })}
     >
       <div

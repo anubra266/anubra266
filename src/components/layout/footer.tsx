@@ -15,6 +15,8 @@ export function Footer() {
           justify: "space-between",
           mt: "[60px]",
           py: "[45px]",
+          px: "[var(--padding)]",
+          maxW: "[var(--maxW)]",
         })}
       >
         <span

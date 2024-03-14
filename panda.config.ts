@@ -28,6 +28,7 @@ export default defineConfig({
             "07": { value: "#111111" },
             "08": { value: "#2A2A2A" },
             "09": { value: "#3A3A3A" },
+            "10": { value: "#222222" },
           },
         },
       },
@@ -38,7 +39,7 @@ export default defineConfig({
               value: { base: "{colors.white}", _dark: "{colors.grey.08}" },
             },
             default: {
-              value: { base: "{colors.white}", _dark: "#222222" },
+              value: { base: "{colors.white}", _dark: "{colors.grey.10}" },
             },
             subtle: {
               value: { base: "{colors.gray.200}", _dark: "{colors.grey.06}" },

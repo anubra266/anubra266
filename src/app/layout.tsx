@@ -85,10 +85,17 @@ export default function RootLayout({
           <div
             className={flex({
               direction: "column",
-              mx: "auto",
+              // mx: "auto",
+              align:"center",
               minH: "screen",
-              maxW: "[1288px]",
-              px: { base: "4", md: "7", lg: "10", xl: "0" },
+              // maxW: "[var(--maxW)]",
+              "--maxW": "1288px",
+              "--padding": {
+                base: "spacing.4",
+                md: "spacing.7",
+                lg: "spacing.10",
+                xl: "spacing.0",
+              },
             })}
           >
             <Header />
