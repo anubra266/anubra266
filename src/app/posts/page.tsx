@@ -8,7 +8,7 @@ export default function Index() {
 
   return (
     <main>
-      <section>
+      {/* <section>
         <h2
           className={css({
             mb: "8",
@@ -75,7 +75,7 @@ export default function Index() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }
