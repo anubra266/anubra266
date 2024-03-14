@@ -1,8 +1,9 @@
 import { css, cx } from "styled-system/css";
 import { center, flex, stack } from "styled-system/patterns";
-import { tag, text } from "styled-system/recipes";
+import { link, tag, text } from "styled-system/recipes";
+import { WORKS } from "~/components/routes/index/works";
 
-export function WorkCard() {
+export function WorkCard({ work }: { work: (typeof WORKS)[number] }) {
   return (
     <div
       className={stack({
@@ -14,17 +15,27 @@ export function WorkCard() {
       <div
         className={center({
           bg: { base: "grey.005/60", _dark: "grey.06/50" },
-          h: "[352px]",
+          maxH: "[352px]",
           w: "full",
           rounded: "[32px]",
           backdropFilter: "[blur(150)]",
         })}
       >
         <img
-          src="/assets/images/hero_emoji.png"
+          src={`/assets/images/works/${work.id}.png`}
           alt="hero emoji"
           className={css({
-            h: "[88px]",
+            rounded: "[32px]",
+            _dark: { display: "none" },
+            h: "full",
+          })}
+        />
+        <img
+          src={`/assets/images/works/${work.id}_dark.png`}
+          alt="hero emoji"
+          className={css({
+            rounded: "[32px]",
+            _light: { display: "none" },
           })}
         />
       </div>
@@ -34,19 +45,25 @@ export function WorkCard() {
           gap: "4",
         })}
       >
-        <p
-          className={cx(text({ variant: "24" }), css({ fontWeight: "medium" }))}
+        <a
+          href={work.url}
+          className={cx(
+            link(),
+            text({ variant: "24" }),
+            css({ fontWeight: "medium" })
+          )}
         >
-          Project Title
-        </p>
+          {work.title}
+        </a>
         <p className={cx(text({ variant: "17" }), css({ color: "fg.subtle" }))}>
-          Fill your project brief here. It can be the outcome of the project, or
-          some success metrics, or a cheesy tagline.
+          {work.description}
         </p>
         <div className={flex({ gap: "2" })}>
-          <span className={tag()}>Mobile App</span>
-          <span className={tag()}>Website</span>
-          <span className={tag()}>SaaS</span>
+          {work.tags.map((t, i) => (
+            <span key={i} className={tag()}>
+              {t}
+            </span>
+          ))}
         </div>
       </div>
     </div>
