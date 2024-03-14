@@ -18,6 +18,7 @@ export default defineConfig({
         colors: {
           grey: {
             "00": { value: "#FFFFFF" },
+            "005": { value: "#F5F5F5" },
             "01": { value: "#F2F2F2" },
             "02": { value: "#E0E0E0" },
             "03": { value: "#BDBDBD" },
@@ -40,7 +41,7 @@ export default defineConfig({
               value: { base: "{colors.white}", _dark: "#222222" },
             },
             subtle: {
-              value: { base: "{colors.gray.200}", _dark: "#333333" },
+              value: { base: "{colors.gray.200}", _dark: "{colors.grey.06}" },
             },
           },
           fg: {
@@ -85,6 +86,7 @@ export default defineConfig({
     body: {
       bg: "bg.canvas",
       color: "fg.default",
+      fontFamily: "var(--font-body)",
     },
   },
   outdir: "styled-system",

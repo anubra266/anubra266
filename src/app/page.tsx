@@ -1,14 +1,11 @@
-import Link from "next/link";
-import { getAllPosts } from "../lib/api";
-import DateFormatter from "~/components/date-formatter";
-import { css } from "styled-system/css";
+import { Hero } from "~/components/routes/index/hero";
+import { Works } from "~/components/routes/index/works";
 
 export default function Index() {
-  const posts = getAllPosts();
-
   return (
-    <main>
-      <section></section>
-    </main>
+    <section>
+      <Hero />
+      <Works />
+    </section>
   );
 }

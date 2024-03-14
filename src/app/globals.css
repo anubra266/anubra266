@@ -1,1 +1,7 @@
 @layer reset, base, tokens, recipes, utilities;
+
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+
+:root {
+  --font-body: "SF Pro Display", sans-serif;
+}

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "~/lib/api";
 import markdownToHtml from "~/lib/markdownToHtml";
-import DateFormatter from "~/components/date-formatter";
+import DateFormatter from "~/components/global/date-formatter";
 import { css, cva } from "styled-system/css";
 
 export default async function Post({ params }: Params) {

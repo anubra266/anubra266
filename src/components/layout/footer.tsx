@@ -1,6 +1,6 @@
 "use client";
 
-import { ROUTES } from "~/components/header";
+import { ROUTES } from "~/components/layout/header";
 import Link from "next/link";
 import { css } from "styled-system/css";
 import { flex } from "styled-system/patterns";
@@ -61,7 +61,6 @@ export function Footer() {
           <button
             className={button({
               variant: "secondary",
-              // color: { base: "[fg.default/60]", _hover: "fg.default" },
             })}
             onClick={() => {
               window.scrollTo({ top: 0, behavior: "smooth" });

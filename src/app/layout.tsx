@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import {} from "next/font/google";
 
 import "./globals.css";
-import { Header } from "~/components/header";
-import { Footer } from "~/components/footer";
+import { Header } from "~/components/layout/header";
+import { Footer } from "~/components/layout/footer";
 import { flex } from "styled-system/patterns";
 import { Providers } from "~/app/providers";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: `Abraham A. Aremu (aka anubra266) - Software Engineer and Open Source Enthusiast`,
@@ -82,7 +80,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
-      <body className={inter.className}>
+      <body>
         <Providers>
           <div
             className={flex({
@@ -90,7 +88,7 @@ export default function RootLayout({
               mx: "auto",
               minH: "screen",
               maxW: "[1288px]",
-              px: { base: "4", lg: "10", xl: "0" },
+              px: { base: "4", md: "7", lg: "10", xl: "0" },
             })}
           >
             <Header />

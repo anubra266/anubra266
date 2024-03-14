@@ -1,5 +1,5 @@
 import Link from "next/link";
-import DateFormatter from "~/components/date-formatter";
+import DateFormatter from "~/components/global/date-formatter";
 import { css } from "styled-system/css";
 import { getAllPosts } from "~/lib/api";
 

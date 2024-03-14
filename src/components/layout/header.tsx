@@ -7,9 +7,9 @@ import { flex } from "styled-system/patterns";
 import { link } from "styled-system/recipes";
 import Link from "next/link";
 
-import { ThemeToggle } from "~/components/theme-toggle";
-import { BLinkingEye } from "~/components/blinking-eye";
-import { MobileNavbar } from "~/components/mobile-navbar";
+import { ThemeToggle } from "~/components/layout/theme-toggle";
+import { BLinkingEye } from "~/components/layout/blinking-eye";
+import { MobileNavbar } from "~/components/layout/mobile-navbar";
 
 export function Header() {
   const pathname = usePathname();
@@ -22,28 +22,30 @@ export function Header() {
         align: "center",
         justify: "space-between",
         mt: { base: "10", lg: "[60px]" },
+        pb: "1",
       })}
     >
-      <Link
-        href="/"
+      <div
         className={css({
           flex: "1",
         })}
       >
-        <Image
-          alt="Handsome Abraham 😉"
-          src="https://avatars.githubusercontent.com/u/30869823?s=512&v=4"
-          width={40}
-          height={40}
-          className={css({
-            borderRadius: "full",
-            borderStyle: "solid",
-            borderWidth: "[4px]",
-            borderColor: "[fg.default/70]",
-            p: "[1.5px]",
-          })}
-        />
-      </Link>
+        <Link href="/">
+          <Image
+            alt="Handsome Abraham 😉"
+            src="https://avatars.githubusercontent.com/u/30869823?s=512&v=4"
+            width={40}
+            height={40}
+            className={css({
+              borderRadius: "full",
+              borderStyle: "solid",
+              borderWidth: "[4px]",
+              borderColor: "[fg.default/70]",
+              p: "[1.5px]",
+            })}
+          />
+        </Link>
+      </div>
 
       <div
         className={flex({
