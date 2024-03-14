@@ -67,7 +67,7 @@ export function Works() {
 export const WORKS = [
   {
     id: "zagjs",
-    title: "Zag.js (Maintainer)",
+    title: "Zag.js (Co Maintainer)",
     description:
       "Zag is a collection of framework-agnostic UI component patterns like accordion, menu, and dialog that can be used to build design systems for React, Vue and Solid.js",
     tags: ["State Machines,", "Component library"],
@@ -75,7 +75,7 @@ export const WORKS = [
   },
   {
     id: "pandacss",
-    title: "Panda CSS (Maintainer)",
+    title: "Panda CSS (Co Maintainer)",
     description:
       "CSS-in-JS with build time generated styles, RSC compatible, multi-variant support, and best-in-class developer experience",
     tags: ["Styling,", "Design Systems"],
