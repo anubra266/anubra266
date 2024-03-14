@@ -15,41 +15,49 @@ export function Works() {
         mt: "20",
         pt: "4",
         direction: "column",
+        w: "full",
       })}
     >
       <ChocUI />
       <div
-        id="blob3"
         className={stack({
-          gap: "14",
-          px: "[var(--padding)]",
-          mt: "40",
-          py: "14",
           pos: "relative",
         })}
       >
-        <Blob3
-          css={{
-            position: "absolute",
-            bottom: "0",
-            // left: "0",
-            zIndex: "[-1]",
-
-            _dark: { display: "none" },
-          }}
-        />
-        <p
-          className={cx(
-            text({ variant: "64" }),
-            css({ fontWeight: "semibold" })
-          )}
+        <div
+          id="blob3"
+          className={stack({
+            gap: "14",
+            mt: "40",
+            py: "14",
+            px: "[var(--padding)]",
+            maxW: "[var(--maxW)]",
+            w: "full",
+            mx: "auto",
+          })}
         >
-          Other projects
-        </p>
-        <div className={grid({ gap: "2", columns: { base: 1, md: 2 } })}>
-          {Array.from({ length: 4 }).map((_, i) => (
-            <WorkCard key={i} />
-          ))}
+          <Blob3
+            css={{
+              position: "absolute",
+              bottom: "0",
+              left: "0",
+              zIndex: "[-1]",
+              _dark: { display: "none" },
+            }}
+          />
+          <p
+            className={cx(
+              text({ variant: "64" }),
+              css({ fontWeight: "semibold" })
+            )}
+          >
+            Other projects
+          </p>
+          <div className={grid({ gap: "2", columns: { base: 1, md: 2 } })}>
+            {Array.from({ length: 4 }).map((_, i) => (
+              <WorkCard key={i} />
+            ))}
+          </div>
         </div>
       </div>
     </div>

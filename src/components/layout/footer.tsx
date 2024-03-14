@@ -8,15 +8,20 @@ import { button } from "styled-system/recipes";
 
 export function Footer() {
   return (
-    <footer>
+    <footer
+      className={flex({
+        px: "[var(--padding)]",
+        maxW: "[var(--maxW)]",
+        w: "full",
+      })}
+    >
       <nav
         className={flex({
           align: "center",
           justify: "space-between",
           mt: "[60px]",
           py: "[45px]",
-          px: "[var(--padding)]",
-          maxW: "[var(--maxW)]",
+          w: "full",
         })}
       >
         <span

@@ -12,6 +12,8 @@ export function Hero() {
         alignItems: "center",
         justifyContent: "space-between",
         px: "[var(--padding)]",
+        maxW: "[var(--maxW)]",
+        w: "full",
       })}
     >
       <div

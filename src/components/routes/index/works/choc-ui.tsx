@@ -6,7 +6,15 @@ import { Blob2 } from "~/components/layout/blobs/blob2";
 
 export function ChocUI() {
   return (
-    <div className={stack({ gap: "[26px]", align: "center" })}>
+    <div
+      className={stack({
+        gap: "[26px]",
+        align: "center",
+        maxW: "[var(--maxW)]",
+        w: "full",
+        mx: "auto",
+      })}
+    >
       <div
         className={stack({ gap: "4", align: "center", px: "[var(--padding)]" })}
       >
