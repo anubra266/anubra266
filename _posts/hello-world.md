@@ -6,7 +6,7 @@ coverImage: "/assets/blog/hello-world/cover.jpg"
 date: "2020-03-16T05:35:07.322Z"
 ogImage:
   url: "/assets/blog/hello-world/cover.jpg"
-# preview: true
+preview: true
 ---
 
 Lorem ipsum **dolor sit** amet, consectetur _adipiscing_ elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
@@ -54,13 +54,47 @@ function a() {
 }
 ```
 
+WOw
+
+```jsx
+// components/ui/Tabs.tsx
+
+const a () => 1;
+
+import { Tabs } from "@ark-ui/react";
+
+export function CustomTabs() {
+  return (
+    <Tabs.Root defaultValue="home">
+      <Tabs.List>
+        <Tabs.Trigger value="home">Home</Tabs.Trigger>
+        <Tabs.Trigger value="about">About</Tabs.Trigger>
+        <Tabs.Trigger value="community">Community</Tabs.Trigger>
+      </Tabs.List>
+      <Tabs.Content value="home">
+        Write type-safe styles with ease using Panda. It's fun, fast, and easy
+        to use. Styling library you'll enjoy using 🐼
+      </Tabs.Content>
+      <Tabs.Content value="about">
+        CSS-in-JS with build time generated styles, RSC compatible,
+        multi-variant support, and best-in-class developer experience
+      </Tabs.Content>
+      <Tabs.Content value="community">
+        Join our community today. Get support, get involved and join our
+        community of developers - Hop into our Discord
+      </Tabs.Content>
+    </Tabs.Root>
+  );
+}
+```
+
 1. 有序列表
 2. 有序列表2
 
 `simply code`
 
 - [ ] 任务列表
-- [ ] 任务列表2
+- [x] 任务列表2
 
 - 无序列表
 - 无序列表2
@@ -84,7 +118,3 @@ Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris 
 ### Sub Lorem
 
 Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.
-
-```
-
-```

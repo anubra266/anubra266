@@ -20,6 +20,7 @@ export function PostCard({ post }: { post: Post }) {
           p: "6",
           _light: { _hover: { boxShadow: "03" } },
           transition: "[all 0.3s ease]",
+          h: "full",
         })
       )}
     >

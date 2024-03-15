@@ -23,7 +23,6 @@ export function Works() {
         })}
       >
         <div
-          id="blob3"
           className={stack({
             gap: "14",
             mt: "40",
