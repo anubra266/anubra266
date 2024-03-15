@@ -120,48 +120,50 @@ export default async function Post({ params }: Params) {
           />
         </div>
 
-        <div
-          className={css({
-            pos: "relative",
-          })}
-        >
+        {posts.length > 0 && (
           <div
-            className={stack({
-              gap: "14",
-              mt: "40",
-              py: "14",
-              px: "[calc(var(--padding) + 40px)]",
-              maxW: "[calc(var(--maxW) - 80px)]",
-              w: "full",
-              mx: "auto",
-              overflowX: "clip",
+            className={css({
+              pos: "relative",
             })}
           >
-            <p
-              className={cx(
-                text({ variant: "64" }),
-                css({ fontWeight: "semibold" })
-              )}
+            <div
+              className={stack({
+                gap: "14",
+                mt: "40",
+                py: "14",
+                px: "[calc(var(--padding) + 40px)]",
+                maxW: "[calc(var(--maxW) - 80px)]",
+                w: "full",
+                mx: "auto",
+                overflowX: "clip",
+              })}
             >
-              More articles.
-            </p>
+              <p
+                className={cx(
+                  text({ variant: "64" }),
+                  css({ fontWeight: "semibold" })
+                )}
+              >
+                More articles.
+              </p>
 
-            <div className={grid({ gap: "2", columns: { base: 1, md: 2 } })}>
-              {posts.map((p, i) => (
-                <PostCard key={i} post={p} />
-              ))}
+              <div className={grid({ gap: "2", columns: { base: 1, md: 2 } })}>
+                {posts.map((p, i) => (
+                  <PostCard key={i} post={p} />
+                ))}
+              </div>
             </div>
+            <Blob7
+              css={{
+                position: "absolute",
+                bottom: "0",
+                right: "0",
+                zIndex: "[-1]",
+                _dark: { display: "none" },
+              }}
+            />
           </div>
-          <Blob7
-            css={{
-              position: "absolute",
-              bottom: "0",
-              right: "0",
-              zIndex: "[-1]",
-              _dark: { display: "none" },
-            }}
-          />
-        </div>
+        )}
       </article>
     </main>
   );
