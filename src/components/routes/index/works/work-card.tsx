@@ -6,17 +6,20 @@ import { WORKS } from "~/components/routes/index/works";
 export function WorkCard({ work }: { work: (typeof WORKS)[number] }) {
   return (
     <div
-      className={css({
-        bg: {
-          base: "white/50",
-          _dark: { base: "grey.08", _hover: "grey.09" },
-        },
-        rounded: "[32px]",
-        p: "6",
-        _light: { _hover: { boxShadow: "03" } },
-        transition: "[all 0.3s ease]",
-        pos: "relative",
-      })}
+      className={cx(
+        "group",
+        css({
+          bg: {
+            base: "white/50",
+            _dark: { base: "grey.08", _hover: "grey.09" },
+          },
+          rounded: "[32px]",
+          p: "6",
+          _light: { _hover: { boxShadow: "03" } },
+          transition: "[all 0.3s ease]",
+          pos: "relative",
+        })
+      )}
     >
       <div
         className={center({
@@ -54,15 +57,36 @@ export function WorkCard({ work }: { work: (typeof WORKS)[number] }) {
         <a
           href={work.url}
           className={cx(
-            link(),
             text({ variant: "24" }),
             linkOverlay({
               fontWeight: "medium",
-              pos: "static!",
+              mt: "4",
             })
           )}
         >
-          {work.title}
+          <span
+            className={css({
+              bgGradient: "to-r",
+              gradientFrom: "brand.primary/40",
+              gradientTo: "brand.secondary/46",
+              bgSize: "0px 10px",
+              bgPosition: "left bottom",
+              bgRepeat: "no-repeat",
+              transition: "[background-size 500ms]",
+              _hover: {
+                bgSize: "100% 3px",
+              },
+              _groupHover: {
+                bgSize: "100% 10px",
+              },
+              _dark: {
+                gradientFrom: "grey.03/70",
+                gradientTo: "grey.04/65",
+              },
+            })}
+          >
+            {work.title}
+          </span>
         </a>
         <p className={cx(text({ variant: "17" }), css({ color: "fg.subtle" }))}>
           {work.description}
