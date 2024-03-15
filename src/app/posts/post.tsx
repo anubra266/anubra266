@@ -1,23 +1,27 @@
 import Link from "next/link";
 import { css, cx } from "styled-system/css";
 import { center, flex, stack } from "styled-system/patterns";
-import { link, tag, text } from "styled-system/recipes";
+import { tag, text } from "styled-system/recipes";
+import DateFormatter from "~/components/global/date-formatter";
 import { Post } from "~/lib/api";
 
 export function PostCard({ post }: { post: Post }) {
   return (
     <div
-      className={stack({
-        pos: "relative",
-        bg: {
-          base: "white/50",
-          _dark: { base: "grey.08", _hover: "grey.09" },
-        },
-        rounded: "[32px]",
-        p: "6",
-        _light: { _hover: { boxShadow: "03" } },
-        transition: "[all 0.3s ease]",
-      })}
+      className={cx(
+        "group",
+        stack({
+          pos: "relative",
+          bg: {
+            base: "white/50",
+            _dark: { base: "grey.08", _hover: "grey.09" },
+          },
+          rounded: "[32px]",
+          p: "6",
+          _light: { _hover: { boxShadow: "03" } },
+          transition: "[all 0.3s ease]",
+        })
+      )}
     >
       <div
         className={center({
@@ -26,6 +30,8 @@ export function PostCard({ post }: { post: Post }) {
           w: "full",
           rounded: "[32px]",
           backdropFilter: "[blur(150)]",
+          _groupHover: { transform: "scaleX(1.05) scaleY(1.05)" },
+          transition: "[all 0.15s ease]",
         })}
       >
         <img
@@ -41,13 +47,14 @@ export function PostCard({ post }: { post: Post }) {
       <div
         className={stack({
           gap: "4",
+          mt: "5",
         })}
       >
         <Link
           as={`/posts/${post.slug}`}
           href="/posts/[slug]"
           className={cx(
-            link(),
+            // link(),
             text({ variant: "24" }),
             css({
               fontWeight: "medium",
@@ -66,8 +73,37 @@ export function PostCard({ post }: { post: Post }) {
             })
           )}
         >
-          {post.title}
+          <span
+            className={css({
+              bgGradient: "to-r",
+              gradientFrom: "brand.primary/40",
+              gradientTo: "brand.secondary/46",
+              bgSize: "0px 10px",
+              bgPosition: "left bottom",
+              bgRepeat: "no-repeat",
+              transition: "[background-size 500ms]",
+              _hover: {
+                bgSize: "100% 3px",
+              },
+              _groupHover: {
+                bgSize: "100% 10px",
+              },
+              _dark: {
+                gradientFrom: "grey.03/70",
+                gradientTo: "grey.04/65",
+              },
+            })}
+          >
+            {post.title}
+          </span>
         </Link>
+        <div
+          className={text({
+            variant: "17",
+          })}
+        >
+          <DateFormatter dateString={post.date} />
+        </div>
         <p className={cx(text({ variant: "17" }), css({ color: "fg.subtle" }))}>
           {post.excerpt}
         </p>

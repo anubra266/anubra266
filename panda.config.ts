@@ -2,8 +2,6 @@ import { defineConfig } from "@pandacss/dev";
 import { recipes } from "~/theme/recipes";
 
 export default defineConfig({
-  // hash: true,
-  // minify: true,
   preflight: true,
   include: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -17,6 +15,10 @@ export default defineConfig({
         },
         colors: {
           black: { value: "#000000" },
+          brand: {
+            primary: { value: "#FC50B7" },
+            secondary: { value: "#FFC56F" },
+          },
           grey: {
             "00": { value: "#FFFFFF" },
             "005": { value: "#F5F5F5" },
