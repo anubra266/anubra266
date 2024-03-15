@@ -7,7 +7,7 @@ export default function Index() {
     <>
       <Hero />
       {/* <FunFacts /> */}
-      {/* <ReachOut /> */}
+      <ReachOut />
     </>
   );
 }

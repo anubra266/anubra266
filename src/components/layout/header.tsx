@@ -14,7 +14,8 @@ import { MobileNavbar } from "~/components/layout/mobile-navbar";
 export function Header() {
   const pathname = usePathname();
 
-  const isActive = (href: string) => pathname === href;
+  const isActive = (href: string) =>
+    pathname === href || (href !== "/" && pathname.startsWith(href));
 
   return (
     <nav
@@ -126,30 +127,6 @@ export function Header() {
     </nav>
   );
 }
-
-// Use react-icons
-// const SOCIALS = [
-//   {
-//     href: "https://twitter.com/anubra266/",
-//     label: "Twitter",
-//     icon: Twitter,
-//   },
-//   {
-//     href: "https://github.com/anubra266",
-//     label: "GitHub",
-//     icon: GithubIcon,
-//   },
-//   {
-//     href: "https://www.linkedin.com/in/anubra266/",
-//     label: "LinkedIn",
-//     icon: LucideLinkedin,
-//   },
-//   {
-//     href: "mailto:anubra266@gmail.com",
-//     label: "Email",
-//     icon: Mail,
-//   },
-// ];
 
 export const ROUTES = [
   {

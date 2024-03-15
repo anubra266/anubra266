@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { css, cx } from "styled-system/css";
-import { center, flex, stack } from "styled-system/patterns";
+import { center, flex, linkOverlay, stack } from "styled-system/patterns";
 import { tag, text } from "styled-system/recipes";
 import DateFormatter from "~/components/global/date-formatter";
 import { Post } from "~/lib/api";
@@ -54,22 +54,9 @@ export function PostCard({ post }: { post: Post }) {
           as={`/posts/${post.slug}`}
           href="/posts/[slug]"
           className={cx(
-            // link(),
             text({ variant: "24" }),
-            css({
+            linkOverlay({
               fontWeight: "medium",
-              pos: "static",
-              _before: {
-                content: "''",
-                cursor: "inherit",
-                display: "block",
-                position: "absolute",
-                top: "0",
-                left: "0",
-                zIndex: "[0]",
-                width: "full",
-                height: "full",
-              },
             })
           )}
         >

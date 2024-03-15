@@ -1,12 +1,12 @@
 import { css, cx } from "styled-system/css";
-import { center, flex, stack } from "styled-system/patterns";
+import { center, flex, linkOverlay, stack } from "styled-system/patterns";
 import { link, tag, text } from "styled-system/recipes";
 import { WORKS } from "~/components/routes/index/works";
 
 export function WorkCard({ work }: { work: (typeof WORKS)[number] }) {
   return (
     <div
-      className={stack({
+      className={css({
         bg: {
           base: "white/50",
           _dark: { base: "grey.08", _hover: "grey.09" },
@@ -56,20 +56,9 @@ export function WorkCard({ work }: { work: (typeof WORKS)[number] }) {
           className={cx(
             link(),
             text({ variant: "24" }),
-            css({
+            linkOverlay({
               fontWeight: "medium",
-              pos: "static",
-              _before: {
-                content: "''",
-                cursor: "inherit",
-                display: "block",
-                position: "absolute",
-                top: "0",
-                left: "0",
-                zIndex: "[0]",
-                width: "full",
-                height: "full",
-              },
+              pos: "static!",
             })
           )}
         >

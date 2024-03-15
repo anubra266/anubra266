@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import {} from "next/font/google";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 import "./globals.css";
 import { Header } from "~/components/layout/header";
@@ -80,13 +82,19 @@ export default function RootLayout({
         <meta name="theme-color" content="#000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
-      <body>
+      <body
+        style={
+          {
+            "--inter": inter.style.fontFamily,
+          } as any
+        }
+      >
         <Providers>
           <div
             className={flex({
               direction: "column",
               // mx: "auto",
-              align:"center",
+              align: "center",
               minH: "screen",
               // maxW: "[var(--maxW)]",
               "--maxW": "1288px",
