@@ -1,5 +1,3 @@
-"use client";
-
 import { css, cx } from "styled-system/css";
 import { flex, grid, stack, wrap } from "styled-system/patterns";
 import { text } from "styled-system/recipes";
@@ -70,7 +68,7 @@ export const WORKS = [
     title: "Zag.js (Co Maintainer)",
     description:
       "Zag is a collection of framework-agnostic UI component patterns like accordion, menu, and dialog that can be used to build design systems for React, Vue and Solid.js",
-    tags: ["State Machines,", "Component library"],
+    tags: ["State Machines", "Component library"],
     url: "https://zagjs.com",
   },
   {
@@ -78,7 +76,7 @@ export const WORKS = [
     title: "Panda CSS (Co Maintainer)",
     description:
       "CSS-in-JS with build time generated styles, RSC compatible, multi-variant support, and best-in-class developer experience",
-    tags: ["Styling,", "Design Systems"],
+    tags: ["Styling", "Design Systems"],
     url: "https://panda-css.com/",
   },
   {

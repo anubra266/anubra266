@@ -21,7 +21,7 @@
     "remark-html": "^16.0.1"
   },
   "devDependencies": {
-    "@pandacss/dev": "^0.34.3",
+    "@pandacss/dev": "^0.35.0",
     "@pandacss/studio": "^0.34.3",
     "@types/node": "^20",
     "@types/react": "^18",

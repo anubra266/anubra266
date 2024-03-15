@@ -26,12 +26,13 @@ export function getAllPosts(): Post[] {
   return posts;
 }
 
-type Post = {
+export type Post = {
   slug: string;
   title: string;
   date: string;
   coverImage: string;
   excerpt: string;
+  tags: string[];
   ogImage: {
     url: string;
   };

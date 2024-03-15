@@ -54,6 +54,7 @@ export function Header() {
         className={flex({
           hideBelow: "md",
           align: "center",
+          justify: "center",
           flex: "1",
         })}
       >
@@ -61,7 +62,7 @@ export function Header() {
           {ROUTES.map((route) => (
             <li key={route.href}>
               <Link
-                target={route.external ? "_blank" : undefined}
+                // target={route.external ? "_blank" : undefined}
                 data-active={isActive(route.href) ? "" : undefined}
                 href={route.href}
                 className={flex({
@@ -159,11 +160,11 @@ export const ROUTES = [
     href: "/about",
     label: "About",
   },
-  {
-    href: "/resume",
-    label: "Resume",
-    external: true,
-  },
+  // {
+  //   href: "/resume",
+  //   label: "Resume",
+  //   external: true,
+  // },
   {
     href: "/posts",
     label: "Blog",

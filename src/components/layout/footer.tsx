@@ -36,7 +36,8 @@ export function Footer() {
         <ul
           className={flex({
             hideBelow: "md",
-            alignItems: "center",
+            align: "center",
+            justify: "center",
             gap: "4",
             flex: "1",
           })}

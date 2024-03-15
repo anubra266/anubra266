@@ -16,6 +16,7 @@ export default defineConfig({
           "03": { value: "0px 32px 40px rgba(0, 0, 0, 0.16)" },
         },
         colors: {
+          black: { value: "#000000" },
           grey: {
             "00": { value: "#FFFFFF" },
             "005": { value: "#F5F5F5" },
@@ -47,7 +48,7 @@ export default defineConfig({
           },
           fg: {
             default: {
-              value: { base: "{colors.black}", _dark: "{colors.white}" },
+              value: { base: "{colors.black/87}", _dark: "{colors.white/100}" },
             },
             subtle: {
               value: { base: "{colors.black/60}", _dark: "{colors.white/70}" },

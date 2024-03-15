@@ -1,12 +1,14 @@
+import Link from "next/link";
 import { css, cx } from "styled-system/css";
 import { center, flex, stack } from "styled-system/patterns";
 import { link, tag, text } from "styled-system/recipes";
-import { WORKS } from "~/components/routes/index/works";
+import { Post } from "~/lib/api";
 
-export function WorkCard({ work }: { work: (typeof WORKS)[number] }) {
+export function PostCard({ post }: { post: Post }) {
   return (
     <div
       className={stack({
+        pos: "relative",
         bg: {
           base: "white/50",
           _dark: { base: "grey.08", _hover: "grey.09" },
@@ -15,7 +17,6 @@ export function WorkCard({ work }: { work: (typeof WORKS)[number] }) {
         p: "6",
         _light: { _hover: { boxShadow: "03" } },
         transition: "[all 0.3s ease]",
-        pos: "relative",
       })}
     >
       <div
@@ -28,20 +29,11 @@ export function WorkCard({ work }: { work: (typeof WORKS)[number] }) {
         })}
       >
         <img
-          src={`/assets/images/works/${work.id}.png`}
-          alt={work.title}
+          src={post.coverImage}
+          alt={post.title}
           className={css({
             rounded: "[32px]",
-            _dark: { display: "none" },
             h: "full",
-          })}
-        />
-        <img
-          src={`/assets/images/works/${work.id}_dark.png`}
-          alt={work.title}
-          className={css({
-            rounded: "[32px]",
-            _light: { display: "none" },
           })}
         />
       </div>
@@ -51,8 +43,9 @@ export function WorkCard({ work }: { work: (typeof WORKS)[number] }) {
           gap: "4",
         })}
       >
-        <a
-          href={work.url}
+        <Link
+          as={`/posts/${post.slug}`}
+          href="/posts/[slug]"
           className={cx(
             link(),
             text({ variant: "24" }),
@@ -73,13 +66,13 @@ export function WorkCard({ work }: { work: (typeof WORKS)[number] }) {
             })
           )}
         >
-          {work.title}
-        </a>
+          {post.title}
+        </Link>
         <p className={cx(text({ variant: "17" }), css({ color: "fg.subtle" }))}>
-          {work.description}
+          {post.excerpt}
         </p>
         <div className={flex({ gap: "2" })}>
-          {work.tags.map((t, i) => (
+          {post.tags.map((t, i) => (
             <span key={i} className={tag()}>
               {t}
             </span>

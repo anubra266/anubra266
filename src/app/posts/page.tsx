@@ -2,41 +2,33 @@ import Link from "next/link";
 import DateFormatter from "~/components/global/date-formatter";
 import { css } from "styled-system/css";
 import { getAllPosts } from "~/lib/api";
+import { Hero } from "~/app/posts/hero";
+import { NoThoughts } from "~/app/posts/no-thoughts";
+import { PostCard } from "~/app/posts/post";
+import { grid } from "styled-system/patterns";
 
 export default function Index() {
   const posts = getAllPosts();
 
   return (
-    <main>
-      {/* <section>
-        <h2
-          className={css({
-            mb: "8",
-            fontSize: "5xl",
-            lineHeight: "tight",
-            md: { fontSize: "7xl", lineHeight: "tight" },
-            fontWeight: "bold",
-            letterSpacing: "tighter",
-          })}
-        >
-          More Stories
-        </h2>
-        <div
-          className={css({
-            display: "grid",
-            gridTemplateColumns: "1",
-            md: {
-              gridTemplateColumns: "2",
-              columnGap: "16",
-              rowGap: "32",
-            },
-            lg: { columnGap: "32" },
-            rowGap: "20",
-            mb: "32",
-          })}
-        >
-          {posts.map((post) => (
-            <div key={post.slug}>
+    <>
+      <Hero />
+      {/* <NoThoughts /> */}
+      <div
+        className={grid({
+          gap: "4",
+          columns: { base: 1, md: 2 },
+          mb: "32",
+          //
+          py: "[72px]",
+          px: "[var(--padding)]",
+          maxW: "[var(--maxW)]",
+        })}
+      >
+        {posts.map((post) => (
+          <>
+            <PostCard key={post.slug} post={post} />
+            {/* <div key={post.slug}>
               <h3
                 className={css({
                   fontSize: "3xl",
@@ -72,10 +64,10 @@ export default function Index() {
               >
                 {post.excerpt}
               </p>
-            </div>
-          ))}
-        </div>
-      </section> */}
-    </main>
+            </div> */}
+          </>
+        ))}
+      </div>
+    </>
   );
 }
