@@ -9,6 +9,7 @@
   "dependencies": {
     "@ark-ui/anatomy": "^2.3.1",
     "@ark-ui/react": "^2.2.3",
+    "@vercel/analytics": "^1.2.2",
     "date-fns": "^3.3.1",
     "gray-matter": "^4.0.3",
     "hamburger-react": "^2.5.0",
