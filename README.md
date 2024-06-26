@@ -1,1 +1,3 @@
-# My portfolio
+![gitartwork](gitartwork.svg)  
+
+
